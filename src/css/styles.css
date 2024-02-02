@@ -1,0 +1,11 @@
+@import url('./base/reset.css');
+@import url('./common/common.css');
+@import url('./common/container.css');
+
+@import url('./layouts/header.css');
+@import url('./layouts/hero.css');
+@import url('./layouts/exercises.css');
+@import url('./layouts/dayli.css');
+@import url('./layouts/footer.css');
+@import url('./layouts/modal.css');
+@import url('./layouts/qoute.css');
