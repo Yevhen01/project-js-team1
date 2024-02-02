@@ -1,3 +1,37 @@
+:root {
+  --dark-color: #1b1b1b;
+  --accent-color: #7e847f;
+  --light-color: #f6f6f6;
+
+  --main-color_alpha: rgba(251, 251, 251, 0.4);
+  --third-color_alpha: hsla(0, 0%, 96%, 0.485);
+
+  --main-btn-color: #5f6560;
+  --main-btn-color-hover-focus: hsla(130, 3%, 38%, 0.877);
+
+  --main-bg-color: #f6f6f6;
+  --secondary-bg-color: #e8e8e8;
+  --third-bg-color: #7e847f;
+
+  --transition-duration-and-timing-function: 250ms 4s ease;
+  --main-font: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #f6f6f6;
+  background-color: var(--main-bg-color);
+  color: var(--dark-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
