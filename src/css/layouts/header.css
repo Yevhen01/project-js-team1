@@ -16,7 +16,7 @@
   background-color: transparent;
 }
 .logo {
-  color: #1b1b1b;
+  color: var(--dark-color);
   font-weight: 700;
   line-height: 1, 12;
   letter-spacing: -0.02em;
@@ -32,11 +32,11 @@
   display: flex;
   padding: 8px 16px;
   border-radius: 60px;
-  background: #7e847f;
+  background: var(--accent-color);
   gap: 16px;
 }
 .page-nav-link {
-  color: #f6f6f6;
+  color: var(--light-color);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -52,8 +52,8 @@
 .page-nav-link:hover,
 .page-nav-link:focus {
   transform: scale(1.1);
-  background-color: #fff;
-  color: #1b1b1b;
+  background-color: var(--light-color);
+  color: var(--dark-color);
 }
 .socials-list {
   display: flex;
@@ -63,18 +63,18 @@
 .header-socials-item {
   padding: 8px;
   border-radius: 10px;
-  border: 1px solid rgba(50, 50, 50, 0.2);
+  border: 1px solid var(--third-bg-color);
 }
 .header-socials-item:hover,
 .header-socials-item:focus {
-  border: 1px solid #5f6560;
+  border: 1px solid var(--main-btn-color);
 }
 .header-socials-link {
-  fill: #7e847f;
+  fill: var(--third-bg-color);
 }
 .header-socials-link:hover,
 .header-socials-link:focus {
-  fill: #5f6560;
+  fill: var(--main-btn-color);
 }
 
 .socials-svg {
@@ -82,10 +82,9 @@
   align-items: flex-start;
   width: 28px;
   height: 28px;
-  transition: fill #f6f6f6;
+  transition: fill var(--light-color);
 }
 .toggle-mobile-menu-btn {
-  /* fill: #f6f6f6; */
   display: block;
   padding: 0px;
   background-color: transparent;
@@ -147,7 +146,7 @@
     width: 335px;
     height: 100%;
     border-radius: 30px;
-    background: #7e847f;
+    background: var(--accent-color);
     padding: 19px 20px 40px 20px;
 
     opacity: 100%;
@@ -156,18 +155,15 @@
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .open-mobile-menu-svg {
-    /* fill: #f6f6f6; */
-    /* stroke: #f6f6f6; */
     width: 32px;
     height: 16px;
   }
   .mobile-close-menu-svg {
     width: 20px;
     height: 20px;
-    /* stroke: #f6f6f6; */
   }
   .logo-mobile {
-    color: #f6f6f6;
+    color: var(--light-color);
   }
   .mobile-nav {
     margin-top: 263px;
@@ -178,7 +174,7 @@
     pointer-events: none;
   }
   .mob-soc-item {
-    border: 1px solid #f6f6f6;
+    border: 1px solid var(--light-color);
   }
   .mobile-socials-link {
     fill: var(--light-color);
@@ -196,7 +192,7 @@
     display: none;
   } */
   .icon-close-svg {
-    stroke: #f6f6f6;
+    stroke: var(--light-color);
   }
   .is-hidden {
     opacity: 0;
