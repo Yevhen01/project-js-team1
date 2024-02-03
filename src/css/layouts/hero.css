@@ -1,0 +1,244 @@
+.hero-section-second-container {
+    width: 335px;
+    height: 387px;
+    padding-bottom: 20px;
+    background-image: url("../../img/hero/hero-mob.jpg");
+    background-position: center top;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    border-radius: 30px;
+
+}
+
+.hero-section-list {
+    /* приблизний паддінг */
+    padding-top: 320px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 141px;
+    height: 48px;
+    /* margin-bottom: 40px; */
+}
+
+.hero-section-list-item {
+    color: #f6f6f6;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    text-decoration: none;
+    height: 22px;
+    padding: 4px 10px;
+    border-radius: 30px;
+    border: 1px solid rgba(246, 246, 246, 0.3);
+}
+
+.hero-section-sport-list-item {
+    width: 61px;
+}
+
+.hero-section-healthy-list-item {
+    width: 72px;
+}
+
+.hero-section-workout-list-item {
+    width: 77px;
+}
+
+.hero-section-diet-list-item {
+    width: 53px;
+}
+
+.hero-section-container {
+    margin-top: 20px;
+    border-radius: 30px;
+    width: 335px;
+    height: 365px;
+    background: #fff;
+    padding-top: 40px;
+}
+
+.hero-section-title {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 0.89286;
+    letter-spacing: -0.02em;
+    color: #1b1b1b;
+    padding-bottom: 20px;
+}
+
+.hero-section-title-word {
+    font-style: italic;
+    color: #7e847f;
+}
+
+.hero-section-title-text {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.01em;
+    color: #1b1b1b;
+}
+
+/* Планшет */
+
+@media screen and (min-width: 768px) {
+    .hero-section {
+        display: flex;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .hero-section-second-container {
+        border-radius: 50px 0 50px 50px;
+        width: 248px;
+        height: 900px;
+        background-image: url("../../img/hero/hero-tab.jpg");
+        background-position: top left;
+        /* background-size: contain; */
+        background-repeat: no-repeat;
+        display: inline-flex;
+
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section-list {
+        /* приблизний паддінг */
+        /* padding-top: 281px; */
+        padding-bottom: 60px;
+        width: 196px;
+        height: 72px;
+        margin-top: 450px;
+        margin-left: 15px;
+        /* margin-bottom: 40px; */
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .hero-section-list-item {
+        color: #f6f6f6;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-decoration: none;
+        height: 32px;
+        padding: 4px 16px;
+        border-radius: 30px;
+        border: 1px solid rgba(246, 246, 246, 0.3);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section-sport-list-item {
+        width: 86px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section-healthy-list-item {
+        width: 102px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section-workout-list-item {
+        width: 108px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section-diet-list-item {
+        width: 76px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section-container {
+        margin-top: 0px;
+        border-radius: 0 50px 50px 50px;
+        width: 488px;
+        height: 900px;
+        background: #fff;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section-title {
+        padding-top: 193px;
+        font-size: 98px;
+        line-height: 0.96939;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section-title-text {
+        font-size: 18px;
+        line-height: 1.33333;
+        width: 396px;
+    }
+}
+
+/* Десктоп */
+
+@media screen and (min-width: 1280px) {
+    .hero-section-second-container {
+        width: 704px;
+        height: 884px;
+        background-image: url("../../img/hero/hero-desc.jpg");
+        background-position: top left;
+        /* background-size: contain; */
+        background-repeat: no-repeat;
+        display: inline-flex;
+
+
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero-section-container {
+        width: 704px;
+        height: 884px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero-section-list {
+
+        margin-top: 714px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero-section-title {
+        width: 639px;
+        padding-top: 147px;
+        font-size: 120px;
+        line-height: 0.95833;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero-section-title-text {
+        font-size: 18px;
+        line-height: 1.33333;
+        width: 528px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+.hero-section {
+    margin: 0;
+}
+}
