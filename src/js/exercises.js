@@ -17,8 +17,10 @@ refs.equipmentBtn.addEventListener('click', () =>
   onFilterClick(refs.equipmentBtn, 'Equipment')
 );
 
+const windowWidth = 768;
 let currentPage = 1;
 let totalPages = 1;
+let limit = 8;
 
 window.addEventListener('load', () =>
   onFilterClick(refs.musclesBtn, 'Muscles')
@@ -26,9 +28,13 @@ window.addEventListener('load', () =>
 
 async function getFilter(filter) {
   const url = 'https://energyflow.b.goit.study/api/filters';
+  if (window.screen.width > windowWidth) {
+    limit = 12;
+  }
   const response = await axios.get(url, {
-    params: { filter, page: currentPage },
+    params: { filter, page: currentPage, limit },
   });
+
   currentPage = response.data.page;
   totalPages = response.data.totalPages;
   return response.data;
