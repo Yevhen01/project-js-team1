@@ -38,7 +38,7 @@ body {
   top: 16px;
   right: 16px;
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
   width: 28px;
   height: 28px;
@@ -80,15 +80,20 @@ body {
   width: 118px;
   height: 18px;
   margin-bottom: 24px;
-}
-
-.modal-rating {
   display: flex;
-  gap: 2px;
-  /* align-items: center; */
+  align-content: center;
   justify-content: center;
+  gap: 2px;
   width: 118px;
   height: 18px;
+}
+
+.average-rating {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #1b1b1b;
 }
 
 .rating-stars {
@@ -126,16 +131,18 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #f6f6f6;
+
 }
 
 .modal-btn {
   display: flex;
-  align-items: center;
+  align-content: center;
   border-radius: 30px;
   border: none;
   padding: 12px 24px;
   background-color: #7e847f;
   color: #f6f6f6;
+  gap: 8px;
 }
 
 .btn-heart {
