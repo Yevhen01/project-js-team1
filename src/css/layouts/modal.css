@@ -1,6 +1,7 @@
 /* Стилі для модальних вікон */
 body {
-
+  margin: 0;
+  padding: 0;
   width: 1440px;
 }
 
@@ -50,7 +51,6 @@ body {
 
 .close {
   stroke: #1B1B1B;
-  stroke-width: 2px;
 }
 
 .modal-content {
@@ -63,6 +63,7 @@ body {
   padding: 45px 105px;
   width: 270px;
   height: 259px;
+  background-color: #636363;
   background-image: url('#');
   background-size: cover;
 }
@@ -79,7 +80,7 @@ body {
 .modal-rating {
   width: 118px;
   height: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -102,15 +103,37 @@ body {
 
 .modal-short-info {
   width: 342px;
-  height: 96px;
+  /* height: 96px; */
+  border-top: 2px rgba(27, 27, 27, 0.2);
+}
+
+.exercises-short-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title-short-list {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(27, 27, 27, 0.4);
+}
+
+.short-list-info {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  color: #1b1b1b;
 }
 
 .modal-line {
-  width: 342px;
+  width: 100%;
   height: 1px;
   background-color: rgba(27, 27, 27, 0.2);
-  margin-bottom: 16px;
-  ;
+  margin-bottom: 8px;
 }
 
 .modal-description {
@@ -146,5 +169,5 @@ body {
 }
 
 .btn-heart {
-  stroke: #f6f6f6;
+  fill: #7e847f;
 }

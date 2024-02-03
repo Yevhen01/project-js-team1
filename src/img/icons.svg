@@ -63,12 +63,17 @@
 			</symbol>
 
 			<symbol id="icon-close" viewBox="0 0 28 28">
-				<path d="M19.8332 8.16666L8.1665 19.8333M8.1665 8.16666L19.8332 19.8333" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M15 5L5 15"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M5 5L15 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 			</symbol>
 
 			<symbol id="icon-burger" viewBox="0 0 28 28">
 				<path d="M28 10.3333H4" stroke="#7E847F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 				<path d="M28 5H4" stroke="#7E847F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</symbol>
+
+			<symbol id="icon-line" viewBox="0 0 342 2">
+				<path d="M0 1H342" stroke="#1B1B1B" stroke-opacity="0.2" />
 			</symbol>
     </defs>
 </svg>
