@@ -1,0 +1,513 @@
+.main-favorites {
+    position: relative;
+    top: 96px;
+}
+
+.favorites-container {
+    background-color: #E8E8E8;
+    border-radius: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 32px;
+    width: 335px;
+}
+
+.favorites-container h2 {
+    display: block;
+    color: #1B1B1B;
+    font-family: "DM Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 40px;
+}
+
+.favorites-container-content-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: baseline;
+    gap: 20px;
+    row-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.favorite-label-drop-start {
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.favorite-remove-btn {
+    position: relative;
+    display: flex;
+    border-radius: 50%;
+    background-color: #F6F6F6;
+    border: none;
+    width: 25px;
+    height: 25px;
+    margin-right: 85px;
+    align-items: center;
+    padding: 0;
+}
+
+.favorite-label-workout {
+    width: 76px;
+    height: 26px;
+    display: inline-flex;
+    padding: 5px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    background: #7E847F;
+    color: #F6F6F6;
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 16px;
+    margin-right: 8px;
+}
+
+.favorite-start-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    color: #1B1B1B;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+    background-color: #F6F6F6;
+
+}
+
+.favorites-icon {
+    stroke: #1B1B1B;
+    margin-left: 8px;
+}
+
+.remove-favorites {
+    fill: none;
+    stroke: #1B1B1B;
+    cursor: pointer;
+}
+
+.favorite-item {
+    display: block;
+    width: 295px;
+    height: 165px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background-color: #F6F6F6;
+}
+
+
+.favorite-label-icon-run {
+    display: flex;
+    color: #1B1B1B;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.favorite-label-icon-run p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1;
+    padding-right: 18px;
+}
+
+.favorite-icon-run {
+    stroke: #F6F6F6;
+    fill: #7E847F;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.favorite-label-icon-run p {
+    max-width: 216px;
+}
+
+.favorite-label-burn {
+    display: flex;
+    color: rgba(27, 27, 27, 0.40);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 6px 16px;
+    padding: 0 16px;
+}
+
+.favorite-label-burn span {
+    color: #1B1B1B;
+}
+
+.favorite-label-burn p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.missing-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 300px;
+    width: 247px;
+    justify-content: center;
+}
+
+.missing-cards img {
+    width: 85px;
+    height: 52px;
+    margin-bottom: 28px;
+}
+
+.missing-cards p {
+    color: #1B1B1B;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .main-favorites {
+        top: 180px;
+    }
+
+    .favorites-container {
+        width: 736px;
+        height: 910px;
+        border-radius: 50px;
+        padding-bottom: 60px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .favorites-container-content-items {
+        column-gap: 14px;
+        row-gap: 20px;
+        overflow-y: auto;
+        height: 720px;
+    }
+
+    .favorites-container-content-items:hover {
+        overflow-y: auto;
+    }
+
+    .favorites-container h2 {
+        display: block;
+        padding-top: 64px;
+        margin-left: 27px;
+    }
+
+    .favorite-label-workout {
+        width: 76px;
+        height: 26px;
+        display: inline-flex;
+        padding: 5px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 15px;
+        background: #7E847F;
+        color: #F6F6F6;
+        font-family: "DM Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 16px;
+    }
+
+    .favorite-start-btn {
+        display: flex;
+        align-items: center;
+        border: none;
+        color: #1B1B1B;
+        font-family: "DM Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.29;
+        background-color: #F6F6F6;
+        margin-left: 45px;
+    }
+
+    .favorites-icon {
+        stroke: #1B1B1B;
+        margin-left: 8px;
+    }
+
+    .remove-favorites {
+        fill: none;
+        stroke: #1B1B1B;
+        /* margin-right: 90px; */
+    }
+
+
+    .favorite-item {
+        display: block;
+        width: calc(50% - 7px);
+        height: 165px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background-color: #F6F6F6;
+    }
+
+    .favorite-label-icon-run p {
+        line-height: 1.3;
+        padding-right: 15px;
+    }
+
+    .favorite-icon-run {
+        stroke: #F6F6F6;
+        fill: #7E847F;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .favorite-label-icon-run p {
+        max-width: 320px;
+    }
+
+    .favorite-label-burn {
+        display: flex;
+        color: rgba(27, 27, 27, 0.40);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: "DM Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    .missing-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 554px;
+        height: 570px;
+        justify-content: center;
+    }
+
+    .missing-cards img {
+        width: 115px;
+        height: 71px;
+        margin-bottom: 28px;
+    }
+
+    .missing-cards p {
+        font-size: 18px;
+        line-height: 1.33;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 1280px) {
+
+    .main-favorites {
+        top: 156px;
+    }
+
+    .favorites-container {
+        display: block;
+        width: 1408px;
+        height: 740px;
+        border-radius: 50px;
+        padding-bottom: 60px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .favorites-container h2 {
+        padding-left: 0px;
+    }
+
+    .favorite-label-drop-start {
+        display: flex;
+        align-items: center;
+        margin-bottom: 29px;
+        padding-top: 0px;
+    }
+
+
+    .favorite-label-workout {
+        width: 76px;
+        height: 26px;
+        display: inline-flex;
+        padding: 5px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 15px;
+        background: #7E847F;
+        color: #F6F6F6;
+        font-family: "DM Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 16px;
+    }
+
+    .favorite-start-btn {
+        display: flex;
+        align-items: center;
+        border: none;
+        color: #1B1B1B;
+        font-family: "DM Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        background-color: #F6F6F6;
+        margin-left: 130px;
+    }
+
+    .favorites-icon {
+        stroke: #1B1B1B;
+        margin-left: 8px;
+    }
+
+    .remove-favorites {
+        fill: none;
+        stroke: #1B1B1B;
+    }
+
+
+    .favorite-item {
+        display: block;
+        width: calc(33.3% - 13px);
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background-color: #F6F6F6;
+    }
+
+
+    .favorite-label-icon-run {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .favorite-icon-run {
+        stroke: #F6F6F6;
+        fill: #7E847F;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .favorite-label-icon-run p {
+        max-width: 420px;
+    }
+
+    .favorite-label-burn {
+        display: flex;
+        color: rgba(27, 27, 27, 0.40);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: "DM Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        row-gap: 0px;
+        padding: 0 16px;
+    }
+
+
+    .favorites-container-content-items {
+        column-gap: 14px;
+        row-gap: 20px;
+        overflow-y: auto;
+        height: 550px;
+    }
+
+    .favorites-container-content-items:hover {
+        overflow-y: auto;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .main-favorites {
+        overflow: hidden;
+      }
+
+    .favorites-container {
+        display: block;
+        width: 1408px;
+        height: 740px;
+        border-radius: 50px;
+        padding-bottom: 64px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .favorites-container h2 {
+        margin-left: 6px;
+    }
+
+
+    .missing-cards {
+        height: 470px;
+        justify-content: center;
+    }
+
+    .favorites-container-content-items {
+        column-gap: 14px;
+        row-gap: 20px;
+        overflow-y: auto;
+        height: 540px;
+    }
+
+    .favorites-container-content-items:hover {
+        overflow-y: auto;
+    }
+
+}
