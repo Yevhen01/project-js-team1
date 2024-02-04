@@ -9,6 +9,9 @@
     background-repeat: no-repeat;
     border-radius: 30px;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
 }
 
@@ -24,13 +27,17 @@ screen and (min-resolution: 2dppx) {
 
 .hero-section-list {
     /* приблизний паддінг */
-    padding-top: 320px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
+    /* padding-top: 320px;
+    padding-bottom: 20px; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
     width: 141px;
     height: 48px;
     /* margin-bottom: 40px; */
+    display: grid;
+    justify-items: start;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4px;
 }
 
 .hero-section-list-item {
@@ -52,6 +59,7 @@ screen and (min-resolution: 2dppx) {
 
 .hero-section-healthy-list-item {
     width: 72px;
+    margin-left: -16px;
 }
 
 .hero-section-workout-list-item {
@@ -163,10 +171,11 @@ screen and (min-resolution: 2dppx) {
 
 
 
-    .hero-section-healthy-list-item {
-        width: 102px;
-    }
-
+    
+.hero-section-healthy-list-item {
+    width: 102px;
+    margin-left: -22px;
+}
 
 
     .hero-section-workout-list-item {
