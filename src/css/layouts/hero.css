@@ -2,13 +2,25 @@
     width: 335px;
     height: 387px;
     padding-bottom: 20px;
-    background-image: url("../../img/hero/hero-mob.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.10),
+            rgba(46, 47, 66, 0.10)), url("../../img/hero/hero-mob.jpg");
     background-position: center top;
     /* background-size: contain; */
     background-repeat: no-repeat;
     border-radius: 30px;
+    background-size: cover;
 
 }
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 2dppx) {
+    .hero-img {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.10),
+                rgba(46, 47, 66, 0.10)), url("../../img/hero/hero-mob@2x.jpg");
+    }
+}
+
 
 .hero-section-list {
     /* приблизний паддінг */
@@ -89,10 +101,10 @@
     .hero-section {
         display: flex;
     }
-}
 
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-second-container {
         border-radius: 50px 0 50px 50px;
         width: 248px;
@@ -102,12 +114,20 @@
         /* background-size: contain; */
         background-repeat: no-repeat;
         display: inline-flex;
+        background-size: cover;
 
+    }
 
+@media screen and (min-resolution: 192dpi),
+screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 2dppx) {
+    .hero-img {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.10),
+                rgba(46, 47, 66, 0.10)), url("../../img/hero/hero-tab2x.jpg");
     }
 }
 
-@media screen and (min-width: 768px) {
+
     .hero-section-list {
         /* приблизний паддінг */
         /* padding-top: 281px; */
@@ -118,10 +138,10 @@
         margin-left: 15px;
         /* margin-bottom: 40px; */
     }
-}
 
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-list-item {
         color: #f6f6f6;
         background-color: transparent;
@@ -134,33 +154,33 @@
         border-radius: 30px;
         border: 1px solid rgba(246, 246, 246, 0.3);
     }
-}
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-sport-list-item {
         width: 86px;
     }
-}
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-healthy-list-item {
         width: 102px;
     }
-}
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-workout-list-item {
         width: 108px;
     }
-}
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-diet-list-item {
         width: 76px;
     }
-}
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-container {
         margin-top: 0px;
         border-radius: 0 50px 50px 50px;
@@ -168,18 +188,18 @@
         height: 900px;
         background: #fff;
     }
-}
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-title {
         padding-top: 193px;
         font-size: 98px;
         line-height: 0.96939;
         padding-bottom: 25px;
     }
-}
 
-@media screen and (min-width: 768px) {
+
+
     .hero-section-title-text {
         font-size: 18px;
         line-height: 1.33333;
@@ -189,7 +209,7 @@
 
 /* Десктоп */
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
     .hero-section-second-container {
         width: 704px;
         height: 884px;
@@ -198,28 +218,36 @@
         /* background-size: contain; */
         background-repeat: no-repeat;
         display: inline-flex;
+        background-size: cover;
 
 
     }
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 2dppx) {
+    .hero-img {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.10),
+                rgba(46, 47, 66, 0.10)), url("../../img/hero/hero-desc@2x.jpg");
+    }
 }
 
-@media screen and (min-width: 1280px) {
     .hero-section-container {
         width: 704px;
         height: 884px;
     }
-}
 
-@media screen and (min-width: 1280px) {
+
+
     .hero-section-list {
 
-        margin-top: 714px;
-        margin-left: 20px;
+        /* margin-top: 714px; */
+        margin-left: 45px;
         margin-bottom: 20px;
     }
-}
 
-@media screen and (min-width: 1280px) {
+
+
     .hero-section-title {
         width: 639px;
         padding-top: 147px;
@@ -227,9 +255,9 @@
         line-height: 0.95833;
         padding-bottom: 25px;
     }
-}
 
-@media screen and (min-width: 1280px) {
+
+
     .hero-section-title-text {
         font-size: 18px;
         line-height: 1.33333;
@@ -237,8 +265,8 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
+/* @media screen and (min-width: 1280px) {
 .hero-section {
-    margin: 0;
+    flex-direction: row;
 }
-}
+} */
