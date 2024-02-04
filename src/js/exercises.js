@@ -6,6 +6,8 @@ const refs = {
   equipmentBtn: document.querySelector('.equipment-btn'),
   paginationFilter: document.querySelector('.pagination-filter'),
   exercisesTitle: document.querySelector('.exercises-title-filter'),
+  exercisesList: document.querySelector('.exercises-list'),
+  filterList: document.querySelector('.filter-list'),
 };
 
 refs.musclesBtn.addEventListener('click', () =>
@@ -26,6 +28,7 @@ window.addEventListener('load', () =>
 );
 
 function renderMarkup(data) {
+  refs.exercisesList.innerHTML = '';
   const markup = data
     .map(
       item => `
@@ -39,7 +42,7 @@ function renderMarkup(data) {
     )
     .join('');
 
-  document.querySelector('.filter-list').innerHTML = markup;
+  refs.filterList.innerHTML = markup;
   data.forEach(item => attachClickEventToItem(item));
 }
 
@@ -135,7 +138,7 @@ async function onItemClickGetExercises(filterListItem) {
 }
 
 function renderExercisesPagination(totalPages, filter, value) {
-  const paginationExercises = document.querySelector('.pagination-filter');
+  const paginationExercises = refs.paginationFilter;
 
   if (totalPages > 1) {
     paginationExercises.innerHTML = '';
@@ -185,7 +188,7 @@ async function onPageClickExercises(page, filter, event, value) {
 }
 
 function renderMarkupExrcises(data) {
-  document.querySelector('.filter-list').innerHTML = '';
+  refs.filterList.innerHTML = '';
   const markup = data
     .map(
       item => `
@@ -195,7 +198,7 @@ function renderMarkupExrcises(data) {
     )
     .join('');
 
-  document.querySelector('.filter-list').innerHTML = markup;
+  refs.exercisesList.innerHTML = markup;
 }
 
 function attachClickEventToItem(item) {
