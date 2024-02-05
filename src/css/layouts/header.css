@@ -140,6 +140,9 @@
 =====  mobile-menu.css ==============
 ======================================= */
 @media screen and (max-width: 767px) {
+  .super-container {
+    padding-left: 36px;
+  }
   .mobile-menu-container {
     position: fixed;
     display: flex;
