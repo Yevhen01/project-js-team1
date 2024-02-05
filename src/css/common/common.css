@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-color: #ffff;
+  background-color: var(--light-color);
   color: var(--dark-color);
   font-family: var(--main-font);
   font-size: 16px;
