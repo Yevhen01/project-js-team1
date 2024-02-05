@@ -16,18 +16,46 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Favorites</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <load ="partials/header.html" />
 
-    <main>
+    <main class="main-favorites">
+      
+      <load ="partials/favorites-section.html" />
+
+      <section class="favorites">
+        <div
+          class="favorites-container container"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <div class="favorites-container-content">
+            <h2>Favorites</h2>
+            <ul class="favorites-container-content-items">
+            </ul>
+          </div>
+          <div class="filters-pagination">
+            <ul class="pagination-list">
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <load ="partials/qoute.html" />
       <load ="partials/daily.html" />
       <load ="partials/favorites-section.html" />
-    </main>
 
     <load ="partials/modal.html" />
 
+  
+
     <script type="module" src="./favorites.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -1,15 +1,15 @@
-import { ExercisesController } from '../';  // експортую контролер, який використовується для взаємодії з API Exercises
+// import { ExercisesController } from '../js/exercises';  // експортую контролер, який використовується для взаємодії з API Exercises
 
-import { renderFavoriteCards } from '../'; // експорт функції, яка використовується для візуалізації карток улюблених вправ.
+// import { renderFavoriteCards } from '../js/exercises'; // експорт функції, яка використовується для візуалізації карток улюблених вправ.
 
-import {
-  getFavoritCardsFromLocalStorage, //   Отримую масив карток улюблених вправ з локального сховища.
-  isExerciseInFavorite, //   Перевіряю, чи є вправа улюбленою.
-  removeExerciseFromFavoriteById, //   Видаляє вправу з улюблених за ID.
-} from '..//locatStorage';
+// import {
+  // getFavoritCardsFromLocalStorage, //   Отримую масив карток улюблених вправ з локального сховища.
+  // isExerciseInFavorite, //   Перевіряю, чи є вправа улюбленою.
+  // removeExerciseFromFavoriteById, //   Видаляє вправу з улюблених за ID.
+// } from '..//locatStorage';
 
-import { splitArraytoParts } from '../'; // експортую функцію splitArraytoParts (названа умовно), яка використовується для розбиття масиву на частини.
-import { renderPagination } from './pagination'; // функція, використовується для рендерування пагінації (навігації між сторінками)
+// import { splitArraytoParts } from '../'; // експортую функцію splitArraytoParts (названа умовно), яка використовується для розбиття масиву на частини.
+// import { renderPagination } from './pagination'; // функція, використовується для рендерування пагінації (навігації між сторінками)
 import { createMarkupModalEx } from './modal.js';// експорту функції, яка використовується для створення розмітки модального вікна вправи.
 
 
