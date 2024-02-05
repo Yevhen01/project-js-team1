@@ -1,5 +1,8 @@
 .hero-section {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .hero-section-second-container {
@@ -16,6 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin: 0 auto;
     
 
 }
@@ -23,7 +27,7 @@
 @media screen and (min-resolution: 192dpi),
 screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 2dppx) {
-    .hero-img {
+    .hero-section-second-container {
         background-image: linear-gradient(rgba(46, 47, 66, 0.10),
                 rgba(46, 47, 66, 0.10)), url("../../img/hero/hero-mob@2x.jpg");
     }
@@ -43,6 +47,7 @@ screen and (min-resolution: 2dppx) {
     justify-items: start;
     grid-template-columns: repeat(2,1fr);
     gap: 4px;
+    padding: 10px 20px;
 }
 
 .hero-section-list-item {
@@ -76,12 +81,15 @@ screen and (min-resolution: 2dppx) {
 }
 
 .hero-section-container {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     border-radius: 30px;
     width: 335px;
     height: 365px;
     background: #fff;
-    padding-top: 40px;
+    padding: 60px 20px 80px 20px;
+    margin: 0 auto;
+    
+
 }
 
 .hero-section-title {
@@ -113,7 +121,9 @@ screen and (min-resolution: 2dppx) {
 @media screen and (min-width: 768px) {
     .hero-section {
         display: flex;
+        flex-direction: row;
         margin-bottom: 16px;
+        gap: 0;
     }
 
 
@@ -135,7 +145,7 @@ screen and (min-resolution: 2dppx) {
 @media screen and (min-resolution: 192dpi),
 screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 2dppx) {
-    .hero-img {
+    .hero-section-second-container {
         background-image: linear-gradient(rgba(46, 47, 66, 0.10),
                 rgba(46, 47, 66, 0.10)), url("../../img/hero/hero-tab2x.jpg");
     }
@@ -145,7 +155,9 @@ screen and (min-resolution: 2dppx) {
     .hero-section-list {
         /* приблизний паддінг */
         /* padding-top: 281px; */
-        padding-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 32px;
+        padding-bottom: 100px;
         width: 196px;
         height: 72px;
         margin-top: 450px;
@@ -202,6 +214,7 @@ screen and (min-resolution: 2dppx) {
         width: 488px;
         height: 900px;
         background: #fff;
+        padding: 0 32px;
     }
 
 
@@ -234,14 +247,14 @@ screen and (min-resolution: 2dppx) {
         background-repeat: no-repeat;
         display: inline-flex;
         background-size: cover;
-
-
     }
+
+
 
 @media screen and (min-resolution: 192dpi),
 screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 2dppx) {
-    .hero-img {
+    .hero-section-second-container {
         background-image: linear-gradient(rgba(46, 47, 66, 0.10),
                 rgba(46, 47, 66, 0.10)), url("../../img/hero/hero-desc@2x.jpg");
     }
@@ -250,6 +263,8 @@ screen and (min-resolution: 2dppx) {
     .hero-section-container {
         width: 704px;
         height: 884px;
+        padding: 0 32px;
+
     }
 
 
@@ -286,4 +301,4 @@ screen and (min-resolution: 2dppx) {
 }
 } */
 
-/* ывавыа */
+/* dsfsd */

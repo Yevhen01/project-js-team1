@@ -1,0 +1,80 @@
+<section class="daily-section">
+  <div class="container daily-wrapper">
+    <ul class="daily-list">
+      <li class="daily-item daily-img-item">
+        <picture class="daily-img">
+          <source
+            srcset="
+              ./img/daily/daily-desc.webp    1x,
+              ./img/daily/daily-desc@2x.webp 2x
+            "
+            media="(min-width: 1440px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./img/daily/daily-desc.jpg    1x,
+              ./img/daily/daily-desc@2x.jpg 2x
+            "
+            media="(min-width: 1440px)"
+          />
+
+          <source
+            srcset="
+              ./img/daily/daily-tab.webp    1x,
+              ./img/daily/daily-tab@2x.webp 2x
+            "
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./img/daily/daily-tab.jpg    1x,
+              ./img/daily/daily-tab@2x.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+
+          <source
+            srcset="
+              ./img/daily/daily-mob.webp    1x,
+              ./img/daily/daily-mob@2x.webp 2x
+            "
+            media="(max-width: 767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./img/daily/daily-mob.jpg    1x,
+              ./img/daily/daily-mob@2x.jpg 2x
+            "
+            media="(max-width: 767px)"
+          />
+
+          <img class="daily" src="./img/daily/daily-desc.jpg" alt="daily" />
+        </picture>
+      </li>
+
+      <li class="daily-item daily-info-item-wrapper">
+        <div class="daily-info-item-container">
+          <div class="dayily-icon">
+            <svg class="daily-icon" width="32" height="32">
+              <use href="./img/icons.svg#icon-fitness"></use>
+            </svg>
+          </div>
+
+          <div class="daily-text-container">
+            <h2 class="dail-info-item-title">110 min</h2>
+            <p class="dail-info-item-subtitle">Daily norm of sports</p>
+            <p class="dail-info-item-text">
+              The World Health Organization recommends at least 150 minutes of
+              moderate-intensity aerobic physical activity throughout the week
+              for adults aged 18-64. However, what happens if we adjust that
+              number to 110 minutes every day?
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

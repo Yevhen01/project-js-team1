@@ -1,0 +1,134 @@
+.daily-section {
+  box-sizing: border-box;
+}
+
+.daily-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.daily-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.daily-item {
+  max-width: 335px;
+  max-height: 269px;
+}
+
+ .daily-img-item {
+		overflow: hidden;
+		border-radius: 50px;
+  }
+
+.daily-info-item-container {
+  max-width: 335px;
+  background-color: #1b1b1b;
+  color: #f6f6f678;
+  padding: 40px 20px;
+  display: flex;
+  gap: 14px;
+  border-radius: 25px;
+}
+
+.dail-info-item-title {
+  color: #f6f6f6;
+  margin-bottom: 2px;
+}
+
+.dail-info-item-text {
+  margin-top: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .daily-item {
+    max-width: 736px;
+    height: 302px;
+  }
+
+  .daily-img-item {
+    max-height: 302px;
+    max-width: 736px;
+		overflow: hidden;
+		border-radius: 50px;
+  }
+
+  .daily-info-item-container {
+    max-width: 736px;
+    height: 302px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .daily-list {
+    flex-direction: row;
+  }
+  .daily-item {
+    max-width: 704px;
+    height: 302px;
+  }
+
+  .daily-img-item {
+    max-height: 302px;
+    max-width: 704px;
+  }
+
+  .daily-info-item-container {
+    max-width: 704px;
+    height: 302px;
+  }
+}
+
+@media screen and (min-resolution: 192dpi),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx) {
+  .daily-img {
+    background-image: url(../../img/daily/daily-mob@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .daily-img {
+    background-image: url(../../img/daily/daily-tab@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .daily-img {
+    background-image: url(../../img/daily/daily-tab@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .daily-img {
+    background-image: url(../../img/daily/daily-tab@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-resolution: 192dpi),
+  screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .daily-img {
+    background-image: url(../../img/daily/daily-tab@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .daily-img {
+    background-image: url(../../img/daily/daily-desc@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi),
+  screen and (min-width: 1440px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1440px) and (min-resolution: 2dppx) {
+  .daily-img {
+    background-image: url(../../img/daily/daily-desc@2x.jpg);
+  }
+}

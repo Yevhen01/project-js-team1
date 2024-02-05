@@ -173,6 +173,7 @@ input[type="search"]::-webkit-search-results-decoration {
     color: var(--dark-color);
 }
 
+
 .not-found-results {
     padding: 164px 20px 280px;
 }
@@ -184,6 +185,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .no-results-grey {
     color: var(--accent-color);
 }
+
 
 @media screen and (max-width: 374px) {
     .search-exercise-input {
