@@ -1,16 +1,13 @@
-// import { ExercisesController } from '../js/exercises';  // експортую контролер, який використовується для взаємодії з API Exercises
-
-// import { renderFavoriteCards } from '../js/exercises'; // експорт функції, яка використовується для візуалізації карток улюблених вправ.
-
-// import {
-  // getFavoritCardsFromLocalStorage, //   Отримую масив карток улюблених вправ з локального сховища.
-  // isExerciseInFavorite, //   Перевіряю, чи є вправа улюбленою.
-  // removeExerciseFromFavoriteById, //   Видаляє вправу з улюблених за ID.
-// } from '..//locatStorage';
-
-// import { splitArraytoParts } from '../'; // експортую функцію splitArraytoParts (названа умовно), яка використовується для розбиття масиву на частини.
-// import { renderPagination } from './pagination'; // функція, використовується для рендерування пагінації (навігації між сторінками)
-import { createMarkupModalEx } from './modal.js';// експорту функції, яка використовується для створення розмітки модального вікна вправи.
+import { ExercisesController } from '../api/controllers/ExercisesController';  // експортую контролер, який використовується для взаємодії з API Exercises
+import { renderFavoriteCards } from '../helpers/render'; // експорт функції, яка використовується для візуалізації карток улюблених вправ
+import {
+  getFavoritCardsFromLocalStorage, // Отримую масив карток улюблених вправ з локального сховища
+  isExerciseInFavorite, // Перевіряю, чи є вправа улюбленою
+  removeExerciseFromFavoriteById, // Видаляє вправу з улюблених за ID
+} from '../helpers/localStorage';
+import { splitArraytoParts } from '../helpers/utils';  // експортую функцію splitArraytoParts (названа умовно), яка використовується для розбиття масиву на частини
+import { renderPagination } from './pagination'; // функція, використовується для рендерування пагінації (навігації між сторінками)
+import { createMarkupModalEx } from './exercises.js'; // експорту функції, яка використовується для створення розмітки модального вікна вправи
 
 
 //   отримання списку вправ, додавання, видалення вправ.
