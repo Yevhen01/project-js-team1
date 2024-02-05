@@ -53,6 +53,7 @@
   .daily-img-item {
     max-height: 302px;
     max-width: 736px;
+
 		overflow: hidden;
 		border-radius: 50px;
   }
