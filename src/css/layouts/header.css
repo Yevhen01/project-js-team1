@@ -1,5 +1,5 @@
 .page-header {
-  /* width: 100%; */
+  width: 100%;
   position: absolute;
   z-index: 1;
   top: 20px;
@@ -130,16 +130,19 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .page-header {
-    /* padding: 38px 48px; */
+    
   }
-}
+} */
 
 /* =======================================
 =====  mobile-menu.css ==============
 ======================================= */
 @media screen and (max-width: 767px) {
+  .super-container {
+    padding-left: 36px;
+  }
   .mobile-menu-container {
     position: fixed;
     display: flex;
@@ -166,7 +169,13 @@
     height: 20px;
   } */
   .logo-mobile {
+    cursor: pointer;
+    transition: transform 0.4s;
     color: var(--light-color);
+  }
+  .logo-mobile:hover,
+  .logo-mobile:focus {
+    transform: scale(1.1);
   }
   .mobile-nav {
     margin-top: auto;
