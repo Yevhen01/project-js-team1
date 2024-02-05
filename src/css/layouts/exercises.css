@@ -2,11 +2,7 @@
     border-radius: 30px;
     background-color: var(--secondary-bg-color);
     padding: 40px 20px;
-    margin: 0 20px 20px;
-}
-
-.exercises-section .container {
-    padding: 0;
+    margin-bottom: 20px;
 }
 
 .wrapper {
@@ -59,8 +55,32 @@
 }
 
 .search-form {
-    margin-left: auto;
+    margin-right: auto;
     display: none;
+    position: relative;
+}
+
+.search-exercise-input {
+    border-radius: 30px;
+    padding: 12px 14px;
+    width: 295px;
+    height: 42px;
+    background: #f6f6f6;
+    border: transparent;
+}
+
+.search-btn {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+}
+
+.search-svg {
+    stroke: #1B1B1B;
+    fill: none;
 }
 
 .filter-list {
@@ -145,11 +165,17 @@
     color: var(--dark-color);
 }
 
+@media screen and (max-width: 374px) {
+    .search-exercise-input {
+        width: 246px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .exercises-section {
         border-radius: 50px;
         padding: 64px 48px;
-        margin: 0 16px 16px;
+        margin-bottom: 16px;
     }
 
     .exercises-title {
@@ -162,6 +188,15 @@
     .button-wrapper {
         gap: 8px;
         margin-bottom: 32px;
+    }
+
+    .search-form {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .search-exercise-input {
+        width: 246px;
     }
 
     .exercises-btn {
@@ -206,6 +241,10 @@
 
     .wrapper {
         max-width: 1312px;
+    }
+
+    .search-exercise-input {
+        width: 273px;
     }
 
     .filter-list-item {

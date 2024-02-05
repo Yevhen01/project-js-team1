@@ -92,9 +92,6 @@ async function onPageClick(page, filter, event) {
   try {
     const { data } = await getFilter(filter, currentPage);
     renderMarkup(data.results);
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 50);
   } catch (error) {
     console.log(error);
   }
@@ -192,9 +189,6 @@ async function onPageClickExercises(page, filter, event, value, keyword) {
   try {
     const data = await getExercises(page, filter, value, keyword);
     renderMarkupExrcises(data.results);
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 50);
   } catch (error) {
     console.log(error);
   }
