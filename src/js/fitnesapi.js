@@ -1,11 +1,12 @@
 // Fetch http requests to the server side
 import axios from 'axios';
 
+const BASE_URL = 'https://energyflow.b.goit.study/api';
 const windowWidth = 768;
 let limit = 8;
 
 export async function getFilter(filter, currentPage) {
-  const url = 'https://energyflow.b.goit.study/api/filters';
+  const url = `${BASE_URL}/filters`;
 
   if (window.screen.width > windowWidth) {
     limit = 12;
@@ -21,15 +22,21 @@ export async function getFilter(filter, currentPage) {
   return { data: response.data, fetchedPage, fetchedTotalPages };
 }
 
-export async function getExercises(page, filter, value) {
-  const url = 'https://energyflow.b.goit.study/api/exercises';
+export async function getExercises(page, filter, value, keyword) {
+  const url = `${BASE_URL}/exercises`;
   if (window.screen.width > windowWidth) {
     limit = 9;
   }
-
-  const response = await axios.get(url, {
-    params: { [filter]: value, page, limit },
-  });
+  let response;
+  if (keyword === undefined) {
+    response = await axios.get(url, {
+      params: { [filter]: value, page, limit },
+    });
+  } else {
+    response = await axios.get(url, {
+      params: { [filter]: value, page, limit, keyword },
+    });
+  }
 
   return response.data;
 }
