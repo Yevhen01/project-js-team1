@@ -20,6 +20,11 @@
   max-height: 269px;
 }
 
+ .daily-img-item {
+		overflow: hidden;
+		border-radius: 50px;
+  }
+
 .daily-info-item-container {
   max-width: 335px;
   background-color: #1b1b1b;
