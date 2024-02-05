@@ -29,13 +29,12 @@
 
     allLinks.forEach(link => {
       link.style.backgroundColor = 'transparent';
+
       link.classList.remove('current');
     });
 
     event.target.style.backgroundColor = '#f6f6f6';
     event.target.classList.add('current');
-
-    console.log('Clicked on link:', event.target.textContent);
 
     // if (window.innerWidth >= 768) {
     //   const href = event.target.getAttribute('href');
@@ -59,6 +58,7 @@
     refs.openMenuSvg.classList.toggle('is-hidden');
     refs.logo.classList.toggle('is-hidden');
   }
+  // refs.favoritesLink.addEventListener('click', changeColorForFavorites);
 })();
 
 // ==================================================

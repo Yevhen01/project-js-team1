@@ -130,11 +130,11 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .page-header {
-    /* padding: 38px 48px; */
+    
   }
-}
+} */
 
 /* =======================================
 =====  mobile-menu.css ==============
@@ -166,7 +166,13 @@
     height: 20px;
   } */
   .logo-mobile {
+    cursor: pointer;
+    transition: transform 0.4s;
     color: var(--light-color);
+  }
+  .logo-mobile:hover,
+  .logo-mobile:focus {
+    transform: scale(1.1);
   }
   .mobile-nav {
     margin-top: auto;
