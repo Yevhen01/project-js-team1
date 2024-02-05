@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-color: var(--main-bg-color);
+  background-color: #ffff;
   color: var(--dark-color);
   font-family: var(--main-font);
   font-size: 16px;
@@ -34,9 +34,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  
 }
-
-
-
-
