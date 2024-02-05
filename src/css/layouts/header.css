@@ -1,0 +1,215 @@
+.page-header {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.page-header.fixed {
+  position: fixed;
+}
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+.logo {
+  color: var(--dark-color);
+  font-weight: 700;
+  line-height: 1, 12;
+  letter-spacing: -0.02em;
+  transition: transform 0.4s;
+}
+.logo:hover,
+.logo:focus {
+  transform: scale(1.1);
+}
+.page-nav {
+}
+.page-nav-list {
+  display: flex;
+  padding: 8px 16px;
+  border-radius: 60px;
+  background: var(--accent-color);
+  gap: 16px;
+}
+.page-nav-link {
+  color: var(--light-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  display: flex;
+  padding: 6px 26px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+
+  transition: background-color;
+  transition: transform 0.4s;
+}
+.page-nav-link.current,
+.page-nav-link:hover,
+.page-nav-link:focus {
+  transform: scale(1.1);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.header-socials-item {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--third-bg-color);
+}
+.header-socials-item:hover,
+.header-socials-item:focus {
+  border: 1px solid var(--main-btn-color);
+}
+.header-socials-link {
+  fill: var(--third-bg-color);
+}
+.header-socials-link:hover,
+.header-socials-link:focus {
+  fill: var(--main-btn-color);
+}
+
+.socials-svg {
+  display: flex;
+  align-items: flex-start;
+  width: 28px;
+  height: 28px;
+  transition: fill var(--light-color);
+}
+.toggle-mobile-menu-btn {
+  width: 32px;
+  height: 16px;
+  display: block;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  line-height: 0;
+}
+/* /Page Header */
+
+@media screen and (max-width: 767px) {
+  .page-header-container {
+    padding: 20px 20px;
+  }
+  .logo {
+    font-size: 16px;
+  }
+  .page-nav {
+    display: none;
+  }
+  .page-nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile-socials-list {
+    margin-top: auto;
+  }
+  .header-socials-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header-container {
+    padding: 20px 32px;
+  }
+  .logo {
+    font-size: 28px;
+  }
+  .toggle-mobile-menu-btn {
+    display: none;
+  }
+}
+
+/* @media screen and (min-width: 1440px) {
+  .page-header {
+    
+  }
+} */
+
+/* =======================================
+=====  mobile-menu.css ==============
+======================================= */
+@media screen and (max-width: 767px) {
+  .super-container {
+    padding-left: 36px;
+  }
+  .mobile-menu-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+    bottom: 20px;
+    min-width: 335px;
+
+    border-radius: 30px;
+    background: var(--accent-color);
+    padding: 19px 20px 40px 20px;
+
+    opacity: 100%;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .open-mobile-menu-svg {
+    width: 32px;
+    height: 16px;
+  }
+  /* .mobile-close-menu-svg {
+    width: 20px;
+    height: 20px;
+  } */
+  .logo-mobile {
+    cursor: pointer;
+    transition: transform 0.4s;
+    color: var(--light-color);
+  }
+  .logo-mobile:hover,
+  .logo-mobile:focus {
+    transform: scale(1.1);
+  }
+  .mobile-nav {
+    margin-top: auto;
+  }
+  .mobile-menu-container.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .mob-soc-item {
+    border: 1px solid var(--light-color);
+  }
+  .mobile-socials-link {
+    fill: var(--light-color);
+  }
+  .mobile-socials-link:hover,
+  .mobile-socials-link:focus {
+    fill: var(--dark-color);
+  }
+
+  .icon-burger {
+  }
+  .icon-close-svg {
+    stroke: var(--light-color);
+  }
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-container {
+    display: none;
+  }
+}
