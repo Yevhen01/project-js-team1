@@ -35,6 +35,7 @@
 .button-wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 6px;
     margin-bottom: 40px;
 }
@@ -55,6 +56,11 @@
 .exercises-btn.active {
     background-color: var(--accent-color);
     color: var(--light-color);
+}
+
+.search-form {
+    margin-left: auto;
+    display: none;
 }
 
 .filter-list {
