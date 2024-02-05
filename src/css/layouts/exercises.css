@@ -1,0 +1,253 @@
+.exercises-section {
+    border-radius: 30px;
+    background-color: var(--secondary-bg-color);
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    max-width: 295px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exercises-title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.exercises-title-grey {
+    font-size: 24px;
+    line-height: 1.33333;
+    letter-spacing: -0.02em;
+    color: rgba(27, 27, 27, 0.5);
+    text-transform: capitalize;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 40px;
+}
+
+.exercises-btn {
+    font-family: var(--main-font);
+    font-size: 14px;
+    line-height: 1.28571;
+    color: var(--dark-color);
+    border-radius: 30px;
+    padding: 7px 14px;
+    min-width: 81px;
+    min-height: 32px;
+    background-color: var(--light-color);
+    border: none;
+}
+
+.exercises-btn.active {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}
+
+.search-form {
+    margin-right: auto;
+    display: none;
+    position: relative;
+}
+
+.search-exercise-input {
+    border-radius: 30px;
+    padding: 12px 14px;
+    width: 295px;
+    height: 42px;
+    background: #f6f6f6;
+    border: transparent;
+}
+
+.search-btn {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+}
+
+.search-svg {
+    stroke: #1B1B1B;
+    fill: none;
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.filter-list-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.filter-list-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.filter-list-item-name {
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    color: var(--light-color);
+    text-transform: capitalize;
+    margin-bottom: 2px;
+}
+
+.filter-name {
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(246, 246, 246, 0.4);
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background: rgba(16, 16, 16, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(246, 246, 246, 0.3);
+}
+
+.pagination-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-btn {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    color: rgba(27, 27, 27, 0.4);
+    border: transparent;
+    background-color: transparent;
+}
+
+.pagination-btn.active {
+    border: 1px solid var(--dark-color);
+    border-radius: 18px;
+    padding: 0px 12px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-color);
+}
+
+@media screen and (max-width: 374px) {
+    .search-exercise-input {
+        width: 246px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .exercises-section {
+        border-radius: 50px;
+        padding: 64px 48px;
+        margin-bottom: 16px;
+    }
+
+    .exercises-title {
+        letter-spacing: -0.02em;
+        margin-bottom: 32px;
+        font-size: 44px;
+        line-height: 1.09091;
+    }
+
+    .button-wrapper {
+        gap: 8px;
+        margin-bottom: 32px;
+    }
+
+    .search-form {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .search-exercise-input {
+        width: 246px;
+    }
+
+    .exercises-btn {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 10px 20px;
+        min-width: 101px;
+        min-height: 44px;
+    }
+
+    .filter-list {
+        flex-direction: row;
+        gap: 14px;
+    }
+
+    .wrapper {
+        max-width: 640px;
+    }
+
+    .pagination-filter {
+        margin-top: 32px;
+    }
+
+    .filter-list-item {
+        width: calc((100% - 14px) / 2);
+    }
+
+    .pagination-btn {
+        font-size: 24px;
+        line-height: 1.33333;
+        letter-spacing: 0.04em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .filter-list {
+        row-gap: 40px;
+        column-gap: 20px;
+
+    }
+
+    .wrapper {
+        max-width: 1312px;
+    }
+
+    .search-exercise-input {
+        width: 273px;
+    }
+
+    .filter-list-item {
+        width: calc((100% - 60px) / 4);
+    }
+}
