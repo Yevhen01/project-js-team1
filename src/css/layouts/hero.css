@@ -1,3 +1,7 @@
+.hero-section {
+    margin-bottom: 20px;
+}
+
 .hero-section-second-container {
     width: 335px;
     height: 387px;
@@ -12,6 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    
 
 }
 
@@ -108,6 +113,7 @@ screen and (min-resolution: 2dppx) {
 @media screen and (min-width: 768px) {
     .hero-section {
         display: flex;
+        margin-bottom: 16px;
     }
 
 
@@ -279,3 +285,6 @@ screen and (min-resolution: 2dppx) {
     flex-direction: row;
 }
 } */
+
+/* ывавыа */
+/* ывавыа */

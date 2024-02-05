@@ -202,8 +202,6 @@
     line-height: 1.29;
 }
 
-
-
 @media screen and (min-width: 768px) {
 
     .main-favorites {
@@ -342,9 +340,6 @@
     }
 
 }
-
-
-
 
 @media screen and (min-width: 1280px) {
 
@@ -509,6 +504,3 @@
     .favorites-container-content-items:hover {
         overflow-y: auto;
     }
-
-}
-

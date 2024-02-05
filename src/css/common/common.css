@@ -2,6 +2,7 @@
   --dark-color: #1b1b1b;
   --accent-color: #7e847f;
   --light-color: #f6f6f6;
+  --white: #ffffff;
 
   --main-color_alpha: rgba(251, 251, 251, 0.4);
   --third-color_alpha: hsla(0, 0%, 96%, 0.485);
@@ -22,21 +23,24 @@ html {
 }
 
 body {
-  background-color: var(--main-bg-color);
+  background-color: var(--light-color);
   color: var(--dark-color);
   font-family: var(--main-font);
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
+  padding: 16px;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  
 }
 
-
-
-
+@media screen and (max-width: 767px) {
+  body {
+    padding: 20px;
+  }
+}
