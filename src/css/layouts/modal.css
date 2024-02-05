@@ -38,14 +38,14 @@
   }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1440px) {
   .modal-box {
     gap: 40px;
     width: 732px;
   }
 }
 
-.modal-close {
+.modals-close {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -59,10 +59,12 @@
   border-radius: 50%;
   background-color: transparent;
   margin-bottom: 2px;
+  padding: 0;
+
 }
 
-@media only screen and (min-width: 768px) {
-  .modal-close {
+@media only screen and (min-width: 767px) {
+  .modals-close {
     width: 28px;
     height: 28px;
     top: 16px;
@@ -118,7 +120,6 @@
 }
 
 .modal-title {
-  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   line-height: 1.33333;
   color: #1b1b1b;
@@ -155,7 +156,6 @@
 }
 
 .average-rating {
-  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
@@ -322,20 +322,16 @@
   line-height: 18px
 }
 
-.radio-lbl {
-  width: 18px;
-  height: 18px;
-}
-
 .star-rating {
   font-size: 0;
-  white-space: nowrap;
-  display: inline-block;
-  width: 250px;
-  height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+  width: 90px;
+  height: 18px;
   overflow: hidden;
   position: relative;
-  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
   background-size: contain;
 }
 
