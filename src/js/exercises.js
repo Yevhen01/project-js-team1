@@ -247,5 +247,7 @@ async function filterExercisesBySearch(filter, value, keyword) {
     }
   } catch (error) {
     console.log(error);
+  } finally {
+    refs.searchForm.reset();
   }
 }
