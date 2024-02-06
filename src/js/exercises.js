@@ -1,4 +1,5 @@
 import { getFilter, getExercises, getExercisesById } from './fitnesapi';
+import { openExerciseModal } from './modal';
 
 const refs = {
   musclesBtn: document.querySelector('.muscles-btn'),
@@ -313,7 +314,6 @@ async function filterExercisesBySearch(filter, value, keyword) {
       refs.exercisesList.innerHTML = `<li class="not-found-results"><p class="message-not-found-results">Unfortunately, <span class="no-results-grey">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p></li>`;
 
       refs.exercisesList.innerHTML = `<li>Unfortunately, no results were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</li>`;
-
     }
   } catch (error) {
     console.log(error);
@@ -336,11 +336,9 @@ function onExercisesClick(event) {
 }
 
 async function onArrowClick(exerciseId) {
-  console.log(exerciseId);
   try {
     const exerciseDetails = await getExercisesById(exerciseId);
-    console.log(exerciseDetails);
-    // openExerciseModal(exerciseDetails);
+    openExerciseModal(exerciseDetails);
   } catch (error) {
     console.log(error);
   }
