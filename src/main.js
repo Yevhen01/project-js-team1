@@ -4,4 +4,4 @@ import './js/qoute';
 import './js/exercises';
 import './js/modal';
 import './js/footer';
-import './js/exercises';
+import './js/favoritelist';

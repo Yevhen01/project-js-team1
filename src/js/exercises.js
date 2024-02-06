@@ -1,5 +1,5 @@
 import { getFilter, getExercises, getExercisesById } from './fitnesapi';
-import { openExerciseModal } from './modal';
+// import { openExerciseModal } from './modal';
 
 const refs = {
   musclesBtn: document.querySelector('.muscles-btn'),
@@ -338,7 +338,7 @@ function onExercisesClick(event) {
 async function onArrowClick(exerciseId) {
   try {
     const exerciseDetails = await getExercisesById(exerciseId);
-    openExerciseModal(exerciseDetails);
+    // openExerciseModal(exerciseDetails);
   } catch (error) {
     console.log(error);
   }
