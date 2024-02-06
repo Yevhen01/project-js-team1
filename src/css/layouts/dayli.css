@@ -3,7 +3,7 @@
 }
 
 .daily-wrapper {
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +13,7 @@
 .daily-list {
   display: flex;
   flex-direction: column;
+  border-radius: 50px;
 }
 
 .daily-item {
@@ -120,6 +121,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .daily-section {
+  margin-bottom: 16px;
+}
+
   .daily-img {
     background-image: url(../../img/daily/daily-desc@2x.jpg);
   }
