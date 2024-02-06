@@ -40,3 +40,11 @@ export async function getExercises(page, filter, value, keyword) {
 
   return response.data;
 }
+
+export async function getExercisesById(id) {
+  const url = `${BASE_URL}/exercises/${id}`;
+
+  const response = await axios.get(url);
+
+  return response.data;
+}

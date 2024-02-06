@@ -1,4 +1,4 @@
-import { getFilter, getExercises } from './fitnesapi';
+import { getFilter, getExercises, getExercisesById } from './fitnesapi';
 
 const refs = {
   musclesBtn: document.querySelector('.muscles-btn'),
@@ -20,6 +20,7 @@ refs.bodyPartsBtn.addEventListener('click', () =>
 refs.equipmentBtn.addEventListener('click', () =>
   onFilterClick(refs.equipmentBtn, 'Equipment')
 );
+
 window.addEventListener('load', () =>
   onFilterClick(refs.musclesBtn, 'Muscles')
 );
@@ -211,14 +212,13 @@ function renderMarkupExrcises(data) {
               </svg>
            </div>
 
-          <div class="start-arrow-container">
-            <p class="exe-top-text">Star</p>
-            <a href="#" class="icon-arrow-container">
+            <a href="#" class="icon-arrow-container >
+            <p class="exe-top-text">Start</p>
               <svg class="icon-arrow-svg" width="13" height="13">
                 <use href="./img/icons.svg#icon-right-sm-arrow"></use>
               </svg>
             </a>
-          </div>
+
         </div>
 
         <div class="item-middle-container">
@@ -254,6 +254,7 @@ function renderMarkupExrcises(data) {
     .join('');
 
   refs.exercisesList.innerHTML = markup;
+  refs.exercisesList.addEventListener('click', onExercisesClick);
 }
 
 function truncateText(text) {
@@ -314,5 +315,29 @@ async function filterExercisesBySearch(filter, value, keyword) {
     console.log(error);
   } finally {
     refs.searchForm.reset();
+  }
+}
+
+function onExercisesClick(event) {
+  const isArrowIcon = event.target.closest('.icon-arrow-container');
+
+  if (isArrowIcon) {
+    const exerciseItem = event.target.closest('[data-id]');
+
+    if (exerciseItem) {
+      const exerciseId = exerciseItem.dataset.id;
+      onArrowClick(exerciseId);
+    }
+  }
+}
+
+async function onArrowClick(exerciseId) {
+  console.log(exerciseId);
+  try {
+    const exerciseDetails = await getExercisesById(exerciseId);
+    console.log(exerciseDetails);
+    // openExerciseModal(exerciseDetails);
+  } catch (error) {
+    console.log(error);
   }
 }

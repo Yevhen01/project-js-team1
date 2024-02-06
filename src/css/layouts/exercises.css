@@ -191,6 +191,12 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .search-form {
+        margin-top: 20px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .exercises-section {
         border-radius: 50px;
@@ -326,19 +332,14 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-right: 4px;
 }
 
-.start-arrow-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .exe-top-text {
     font-size: 14px;
 }
 
 .icon-arrow-container {
-    margin-left: 8px;
+    gap: 8px;
     display: flex;
+    align-items: center;
 }
 
 .item-middle-container {
