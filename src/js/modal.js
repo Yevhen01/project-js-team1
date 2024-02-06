@@ -1,33 +1,29 @@
-import axios from 'axios';
+const modalWindow = document.querySelector('.modal')
+const modalContainer = document.querySelector('.modal-box');
+const modalCloseBtn = document.querySelector('.modal-close');
 
-const modalTarget = document.querySelector('.exercises-list');
-const exercisesModal = document.querySelector('.modal');
-const btnClose = document.querySelector('.modal-close');
-const btnFavorites = document.querySelector('.js-btn-add');
+modalCloseBtn.addEventListener('click', closeModalContainer)
 
-modalTarget.addEventListener('click', openModal);
-btnClose.addEventListener('click', closeModal);
+document.addEventListener('click', function(e){
+  if(!modalContainer.contains(e.target))
+  closeModalContainer()
+})
 
-function openModal(e) {
-  e.preventDefault();
-  exercisesModal.classList.remove('is-hidden');
-  getExercisesInfo();
+function closeModalContainer(){
+  modalWindow.classList.add('is-hidden');
 }
 
-function getExercisesInfo() {
-  const BASE_URL = 'https://energyflow.b.goit.study/api';
-  const END_POINT = '/exercises/';
-  const url = BASE_URL + END_POINT;
-
-  const params = {
-    exercisesID: exercises.results._id,
-  };
-  return axios.get(url, { params }).then(res => res.data);
+export function openExerciseModal(exerciseDetails){
+  console.log(exerciseDetails);
+  modalWindow.classList.remove('is-hidden')
+  modalWindow.querySelector('.modal-title').innerHTML = exerciseDetails.name;
+  modalWindow.querySelector('.modal-gif').style.backgroundImage = `linear-gradient(rgba(27, 27, 27, 0.2), rgba(27, 27, 27, 0.2)), url(${exerciseDetails.gifUrl})`;
+  modalWindow.querySelector('.average-rating').innerHTML = exerciseDetails.rating;
+  modalWindow.querySelector('.modal-target').textContent = exerciseDetails.target;
+  modalWindow.querySelector('.modal-dody-part').textContent = exerciseDetails.bodyPart;
+  modalWindow.querySelector('.modal-equipment').textContent = exerciseDetails.equipment;
+  modalWindow.querySelector('.modal-popular').textContent = exerciseDetails.popularity;
+  modalWindow.querySelector('.modal-calories').textContent = exerciseDetails.burnedCalories;
+  modalWindow.querySelector('.modal-description').textContent = exerciseDetails.description;
 }
 
-function closeModal(e) {
-  e.preventDefault();
-  exercisesModal.classList.add('is-hidden');
-}
-
-// =
