@@ -1,4 +1,4 @@
-import { BaseController } from './core/BaseController';
+import { BaseController } from '../favoritesapi/core/BaseControllers';
 
 export class ExercisesController extends BaseController {
   #API_GET_LIST_EXERCISES = 'filters';

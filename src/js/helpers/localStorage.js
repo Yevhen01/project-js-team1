@@ -2,10 +2,11 @@
 // створюю екземпляр класу ExercisesController та ініціалізую дані про вправи
 // оголошую змінну storageKeys з ключами для зберігання даних в локальному сховищі
 
-import { ExercisesController } from '../api/controllers/ExercisesController';
+import { ExercisesController } from '../favoritesapi/EcersisesController.js';
 import { setTime0, compareDateWithToday } from './utils';
 const exerciseCntrl = new ExercisesController();
 const exercise = exerciseCntrl.init();
+
 
 export const storageKeys = {
   FAVORITE_EXERCISE: 'favorite-exercise',
