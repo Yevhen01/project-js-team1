@@ -138,13 +138,13 @@
     padding-left: 36px;
   }
   .mobile-menu-container {
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     flex-direction: column;
     top: 20px;
     bottom: 20px;
     min-width: 335px;
-
+    height: 100vh;
     border-radius: 30px;
     background: var(--accent-color);
     padding: 19px 20px 40px 20px;
@@ -160,6 +160,7 @@
   }
 
   .logo-mobile {
+    padding-top: 20px;
     font-weight: 700;
     line-height: 1, 12;
     letter-spacing: -0.02em;
