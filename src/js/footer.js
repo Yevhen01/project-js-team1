@@ -37,7 +37,7 @@ function isValidEmail(email) {
 
 function sendSubscriptionRequest(email) {
 
-    const backendURL = 'https://jsonplaceholder.typicode.com/posts';
+    const backendURL = 'https://energyflow.b.goit.study/api/subscription';
     const data = {
         email: email,
 
