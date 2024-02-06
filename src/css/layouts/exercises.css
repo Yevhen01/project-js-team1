@@ -77,16 +77,23 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
 }
 
-.search-btn {
+.search-btn,
+.remove-btn {
     position: absolute;
     top: 50%;
-    right: 12px;
+    right: 14px;
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
 }
 
-.search-svg {
+.remove-btn {
+    display: none;
+    right: 37px;
+}
+
+.search-svg,
+.remove-svg {
     stroke: #1B1B1B;
     fill: none;
 }
