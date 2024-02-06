@@ -323,6 +323,7 @@ async function filterExercisesBySearch(filter, value, keyword) {
 }
 
 function onExercisesClick(event) {
+  event.preventDefault();
   const isArrowIcon = event.target.closest('.icon-arrow-container');
 
   if (isArrowIcon) {
