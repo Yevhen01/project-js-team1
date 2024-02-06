@@ -9,7 +9,22 @@ subscriptionForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
 
+<<<<<<< Updated upstream
     const emailValue = emailInput.value.trim();
+=======
+  if (!isValidEmail(emailValue)) {
+    iziToast.error({
+      title: 'error',
+      message: 'Sorry, not valid email. Please try again!',
+      position: 'bottomRight',
+      messageColor: '#f6f6f6',
+      backgroundColor: '#7e847f',
+        maxWidth: 300,
+    });
+    emailInput.value = '';
+    return;
+  }
+>>>>>>> Stashed changes
 
 
     if (!isValidEmail(emailValue)) {
