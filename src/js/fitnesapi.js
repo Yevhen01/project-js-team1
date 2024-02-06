@@ -23,19 +23,17 @@ export async function getFilter(filter, currentPage) {
 
 export async function getExercises(page, filter, value, keyword) {
   const url = `${BASE_URL}/exercises`;
+  let params = { [filter]: value, page, limit };
+
   if (window.screen.width > windowWidth) {
     limit = 9;
   }
-  let response;
-  if (keyword === undefined) {
-    response = await axios.get(url, {
-      params: { [filter]: value, page, limit },
-    });
-  } else {
-    response = await axios.get(url, {
-      params: { [filter]: value, page, limit, keyword },
-    });
+
+  if (keyword !== undefined) {
+    params.keyword = keyword;
   }
+
+  const response = await axios.get(url, { params });
 
   return response.data;
 }
