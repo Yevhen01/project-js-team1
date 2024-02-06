@@ -17,7 +17,7 @@ export function openExerciseModal(exerciseDetails){
   console.log(exerciseDetails);
   modalWindow.classList.remove('is-hidden')
   modalWindow.querySelector('.modal-title').innerHTML = exerciseDetails.name;
-  modalWindow.querySelector('.modal-gif-img').setAttribute('src', exerciseDetails.gifUrl);
+  modalWindow.querySelector('.modal-gif').style.backgroundImage = `linear-gradient(rgba(27, 27, 27, 0.2), rgba(27, 27, 27, 0.2)), url(${exerciseDetails.gifUrl})`;
   modalWindow.querySelector('.average-rating').innerHTML = exerciseDetails.rating;
   modalWindow.querySelector('.modal-target').textContent = exerciseDetails.target;
   modalWindow.querySelector('.modal-dody-part').textContent = exerciseDetails.bodyPart;
