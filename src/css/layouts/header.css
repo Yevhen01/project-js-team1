@@ -138,7 +138,7 @@
     padding-left: 36px;
   }
   .mobile-menu-container {
-    /* position: fixed; */
+    position: fixed;
     display: flex;
     flex-direction: column;
     top: 20px;
