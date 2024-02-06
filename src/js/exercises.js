@@ -197,16 +197,87 @@ async function onPageClickExercises(page, filter, event, value, keyword) {
 function renderMarkupExrcises(data) {
   refs.filterList.innerHTML = '';
   refs.searchForm.style.display = 'block';
+
   const markup = data
     .map(
       item => `
-   <li class="exercises-item" data-id="${item._id}">
-      ${item.name}
+   <li class="exe-info-list-item" data-id="${item._id}">
+        <div class="item-top-container">
+          <div class="icon-star-container">
+            <p class="workout">workout</p>
+            <p class="rating">${Math.ceil(item.rating)}</p>
+              <svg class="icon-star-svg" width="18" height="18">
+                <use href="./img/icons.svg#icon-star-full"></use>
+              </svg>
+           </div>
+
+          <div class="start-arrow-container">
+            <p class="exe-top-text">Star</p>
+            <a href="#" class="icon-arrow-container">
+              <svg class="icon-arrow-svg" width="13" height="13">
+                <use href="./img/icons.svg#icon-right-sm-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="item-middle-container">
+          <svg class="icon-run-svg" width="32" height="32">
+            <use href="./img/icons.svg#icon-run"></use>
+          </svg>
+          <h3 class="exe-card-title">${truncateText(item.name)}</h3>
+        </div>
+
+        <div class="item-bottom-container">
+          <div class="bottom-one-info-container">
+            <p class="bottom-info-text">
+              <span class="bottom-span-text">Burned calories:</span> ${
+                item.burnedCalories
+              } / ${item.time} min
+            </p>
+            <p class="bottom-info-text">
+              <span class="bottom-span-text">Body part:</span> ${capitalizeFirstLetter(
+                item.bodyPart
+              )}
+            </p>
+          </div>
+          <div class="bottom-two-info-container">
+            <p class="bottom-info-text">
+              <span class="bottom-span-text">Target:</span> ${capitalizeFirstLetter(
+                item.target
+              )}
+            </p>
+          </div>
+        </div>
     </li>`
     )
     .join('');
 
   refs.exercisesList.innerHTML = markup;
+}
+
+function truncateText(text) {
+  let maxChars = 20;
+
+  if (!text || text.length <= 0) {
+    return text;
+  }
+
+  if (window.screen.width > 1440) {
+    maxChars = 30;
+  } else if (window.screen.width < 375) {
+    maxChars = 10;
+  }
+
+  if (text.length > maxChars) {
+    text = text.slice(0, maxChars) + '...';
+  }
+
+  return capitalizeFirstLetter(text);
+}
+
+function capitalizeFirstLetter(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 function attachClickEventToItem(item) {
@@ -237,7 +308,11 @@ async function filterExercisesBySearch(filter, value, keyword) {
       renderExercisesPagination(data.totalPages, filter, value, keyword);
     } else {
       refs.paginationFilter.innerHTML = '';
+
+      refs.exercisesList.innerHTML = `<li class="not-found-results"><p class="message-not-found-results">Unfortunately, <span class="no-results-grey">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p></li>`;
+
       refs.exercisesList.innerHTML = `<li>Unfortunately, no results were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</li>`;
+
     }
   } catch (error) {
     console.log(error);
