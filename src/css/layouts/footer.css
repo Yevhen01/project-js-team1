@@ -13,11 +13,11 @@
 #email:focus {
     outline: none;
 }
+ 
 
 @media screen and (max-width: 767px) {
     .footer-backgrounde {
         position: relative;
-        height: 100vh;
         object-fit: cover;
         background-size: 100% 100%;
         border-radius: 30px;
@@ -90,7 +90,7 @@
     /* form */
 
     .info-section {
-        width: 295px;
+        max-width: 295px;
         margin-left: 20px;
         margin-top: 40px;
         display: flex;
@@ -117,6 +117,8 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
+        width: 100%;
+        padding-right: 20px;
     }
 
     #email {
@@ -136,7 +138,6 @@
     .form-submit {
         display: flex;
         padding: 12px 0;
-        min-width: 270px;
         justify-content: center;
         align-items: center;
         gap: 8px;
@@ -157,8 +158,13 @@
         line-height: 10px;
         letter-spacing: -0.24px;
         padding-left: 20px;
-        position: fixed;
+<<<<<<< Updated upstream
+        position: absolute;
         bottom: 20px;
+=======
+        padding-top: 60px;
+        padding-bottom: 20px;
+>>>>>>> Stashed changes
     }
 
     .policy-links {
@@ -166,13 +172,13 @@
         gap: 8px;
         padding-top: 10px;
     }
+       
 }
 
 
 @media screen and (min-width: 768px) {
     .footer-backgrounde {
         position: relative;
-        height: 100vh;
         object-fit: cover;
         background-size: 100% 100%;
         border-radius: 50px;
@@ -288,7 +294,7 @@
     }
 
     .info-section {
-        width: 352px;
+        max-width: 352px;
         margin-right: 48px;
         margin-top: 64px;
     }
@@ -305,22 +311,28 @@
         line-height: 18px;
         letter-spacing: -0.28px;
         gap: 32px;
-        position: fixed;
+<<<<<<< Updated upstream
+        position: absolute;
         bottom: 20px;
         left: 25%;
+=======
+        padding-bottom: 32px;
+        padding-top: 120px;
+        justify-content: center;
+>>>>>>> Stashed changes
     }
 
     .policy-links {
         display: flex;
         gap: 8px;
     }
+    
 }
 
 
 @media screen and (min-width: 1440px) {
     .footer-backgrounde {
         position: relative;
-        height: 100vh;
         object-fit: cover;
         background-size: 100% 100%;
         border-radius: 50px;
@@ -329,7 +341,6 @@
                 url('../img/footer/footer-desc@2x.jpg') 2x,
                 url('../img/footer/footer-desc.webp') 1x,
                 url('../img/footer/footer-desc@2x.webp') 2x,
-
             );
     }
 
@@ -348,7 +359,7 @@
     }
 
     .info-section {
-        width: 488px;
+        max-width: 488px;
         margin: 64px 160px 0 160px;
     }
 
@@ -357,10 +368,20 @@
     }
 
     .copyright-info {
-        position: fixed;
+<<<<<<< Updated upstream
+        position: absolute;
         bottom: 26px;
         transform: translateX(-50%);
         text-align: center;
         left: 50%;
+=======
+        padding-top: 160px;
+        padding-bottom: 26px;
+
+>>>>>>> Stashed changes
     }
+}
+.iziToast {
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
