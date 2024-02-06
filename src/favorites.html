@@ -16,27 +16,16 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Favorites</title>
-    <!-- Додавання опису для пошукових систем -->
-    <meta
-      name="description"
-      content="energy.flow - is your guide to better fitness. Gain access to personalized exercises designed to strengthen your body and boost overall physical activity. Join us today and start your journey to a healthier lifestyle with our expert workouts and daily inspirational quotes."
-    />
-    <!-- Підключення бібліотеки для анімацій прокрутки -->
+    <link rel="stylesheet" href="./css/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-        <!-- ----- -->
-
   </head>
   <body>
     <!-- Підключення часткового файлу з шапкою сайту -->
     <load src="partials/header.html" />
 
-      <!-- Головний вміст веб-сторінки -->
     <main class="main-favorites">
-      <load src="partials/qoute.html" />
-      <load src="partials/daily.html" />
+      
 
- <!-- Підключення часткового файлу для головного вмісту сторінки "favorites" -->
-      <load src="partials/favorites-section.html" />
       <section class="favorites">
         <div
           class="favorites-container container"
@@ -49,20 +38,24 @@
             </ul>
           </div>
           <div class="filters-pagination">
-            <ul>
-              <li class="pagination-element" data-value="2">2</li>
+            <ul class="pagination-list">
             </ul>
           </div>
         </div>
       </section>
-    </main>
 
-    <load src="partials/modal.html" />
+      <load ="partials/qoute.html" />
+      <load ="partials/daily.html" />
+      <load ="partials/favorites-section.html" />
+
+    <!-- <load ="partials/modal.html" /> -->
+
+  
+
+    <script type="module" src="./favorites.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <script type="module" src="./favorites.js"></script>
-    
   </body>
 </html>
