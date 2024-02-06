@@ -1,16 +1,16 @@
-.quotes-section-cont {
+.favorites-quotes-section-cont {
   margin-bottom: 20px;
   padding-top: 96px;
 }
 
-.quotes-first,
-.quotes-second,
-.quotes-third {
+.favorites-quotes-first,
+.favorites-quotes-second,
+.favorites-quotes-third {
   border-radius: 30px;
   height: 272px;
 }
 
-.quotes-first {
+.favorites-quotes-first {
   padding: 40px 20px;
   background-color: var(--third-bg-color);
   color: var(--light-color);
@@ -18,41 +18,41 @@
   flex-basis: 100%;
 }
 
-.quotes-first-header {
+.favorites-quotes-first-header {
   display: flex;
   align-items: center;
   margin-bottom: 14px;
 }
 
-.quotes-first-header-icon {
+.favorites-quotes-first-header-icon {
   margin-right: 12px;
 }
 
-.quotes-first-header-title {
+.favorites-quotes-first-header-title {
   flex: 1;
   font-size: 20px;
   line-height: 1.4;
   font-weight: 500;
 }
 
-.quotes-quote-cont {
+.favorites-quotes-quote-cont {
   padding-left: 44px;
 }
 
-.quotes-quote {
+.favorites-quotes-quote {
   font-size: 14px;
   line-height: 1.28;
   margin-bottom: 14px;
   color: var(--third-color_alpha);
 }
 
-.quotes-author {
+.favorites-quotes-author {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
 }
 
-.quotes-second {
+.favorites-quotes-second {
   background-image: url("../../img/favorites/favorites-quote-mobile.png");
   background-position: center;
   background-size: cover;
@@ -60,26 +60,26 @@
   width: 100%;
 }
 
-.quotes-third {
+.favorites-quotes-third {
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.quotes-fitness-icon {
+.favorites-quotes-fitness-icon {
   margin-bottom: 15px;
   fill: var(--dark-color);
 }
 
-.quotes-third-time {
+.favorites-quotes-third-time {
   font-size: 20px;
   line-height: 1;
   font-weight: 500;
   margin-bottom: 6px;
 }
 
-.quotes-third-caption {
+.favorites-quotes-third-caption {
   font-size: 14px;
   line-height: 1.28;
   color: rgba(27, 27, 27, 0.6);
@@ -87,13 +87,13 @@
 
 
 @media (min-resolution: 192dpi) {
-  .quotes-second {
+  .favorites-quotes-second {
     background-image: url("../../img/favorites/favorites-quote-mobile@2x.png");
   }
 }
 
 @media screen and (min-width: 768px) {
-  .quotes-section-cont {
+  .favorites-quotes-section-cont {
     display: flex;
     flex-wrap: wrap;
     gap: 16px 0;
@@ -101,38 +101,38 @@
     margin-bottom: 16px;
   }
 
-  .quotes-first,
-  .quotes-second,
-  .quotes-third {
+  .favorites-quotes-first,
+  .favorites-quotes-second,
+  .favorites-quotes-third {
     border-radius: 50px;
     height: 302px;
   }
 
-  .quotes-first {
+  .favorites-quotes-first {
     padding: 64px 80px;
   }
 
-  .quotes-first-header {
+  .favorites-quotes-first-header {
     margin-bottom: 16px;
   }
 
-  .quotes-first-header-icon {
+  .favorites-quotes-first-header-icon {
     margin-right: 16px;
   }
 
-  .quotes-first-header-title {
+  .favorites-quotes-first-header-title {
     flex: 1;
     font-size: 24px;
     line-height: 1.33;
   }
 
-  .quotes-quote {
+  .favorites-quotes-quote {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 25px;
   }
 
-  .quotes-quote-icon {
+  .favorites-quotes-quote-icon {
     width: 48px;
     height: 48px;
     position: absolute;
@@ -140,55 +140,55 @@
     right: 80px;
   }
 
-  .quotes-second {
+  .favorites-quotes-second {
     background-image: url("../../img/favorites/favorites-quote-tablet.png");
     width: auto;
     flex-basis: 50%;
   }
 
-  .quotes-third {
+  .favorites-quotes-third {
     flex-basis: 50%;
   }
 
-  .quotes-third-time {
+  .favorites-quotes-third-time {
     font-size: 24px;
     line-height: 1.33;
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 768px) {
-  .quotes-second {
+  .favorites-quotes-second {
     background-image: url("../../img/favorites/favorites-quote-tablet@2x.png");
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .quotes-section-cont {
+  .favorites-quotes-section-cont {
     flex-wrap: nowrap;
     padding-top: 156px;
   }
 
-  .quotes-first {
+  .favorites-quotes-first {
     padding: 64px;
     flex-basis: 50%;
   }
 
-  .quotes-quote-icon {
+  .favorites-quotes-quote-icon {
     right: 64px;
   }
 
-  .quotes-second,
-  .quotes-third {
+  .favorites-quotes-second,
+  .favorites-quotes-third {
     flex-basis: 25%;
   }
 
-  .quotes-second {
+  .favorites-quotes-second {
     background-image: url("../../img/favorites/favorites-quote-desktop.png");
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 1440px) {
-  .quotes-second {
+  .favorites-quotes-second {
     background-image: url("../../img/favorites/favorites-quote-desktop@2x.png");
   }
 }
