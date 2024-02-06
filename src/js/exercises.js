@@ -10,6 +10,8 @@ const refs = {
   exercisesList: document.querySelector('.exercises-list'),
   filterList: document.querySelector('.filter-list'),
   searchForm: document.querySelector('.search-form'),
+  removeBtn: document.querySelector('.remove-btn'),
+  searchInput: document.querySelector('.search-exercise-input'),
 };
 
 refs.musclesBtn.addEventListener('click', () =>
@@ -25,6 +27,19 @@ refs.equipmentBtn.addEventListener('click', () =>
 window.addEventListener('load', () =>
   onFilterClick(refs.musclesBtn, 'Muscles')
 );
+
+refs.removeBtn.addEventListener('click', e => {
+  e.preventDefault();
+  onRemoveInputValue(refs.searchInput);
+});
+
+refs.searchInput.addEventListener('input', () => {
+  if (refs.searchInput.value.trim() !== '') {
+    refs.removeBtn.style.display = 'block';
+  } else {
+    refs.removeBtn.style.display = 'none';
+  }
+});
 
 let currentPage = 1;
 let totalPages = 1;
@@ -293,9 +308,16 @@ function attachClickEventToItem(item) {
 
 function onExercisesSearch(event, filter, value) {
   event.preventDefault();
-  const searchValue =
-    refs.searchForm.elements['search-exercises'].value.toLowerCase();
+  refs.removeBtn.style.display = 'none';
+  const searchValue = refs.searchForm.elements['search-exercises'].value
+    .toLowerCase()
+    .trim();
   filterExercisesBySearch(filter, value, searchValue);
+}
+
+function onRemoveInputValue(inputField) {
+  inputField.value = '';
+  refs.removeBtn.style.display = 'none';
 }
 
 async function filterExercisesBySearch(filter, value, keyword) {
@@ -310,10 +332,7 @@ async function filterExercisesBySearch(filter, value, keyword) {
       renderExercisesPagination(data.totalPages, filter, value, keyword);
     } else {
       refs.paginationFilter.innerHTML = '';
-
       refs.exercisesList.innerHTML = `<li class="not-found-results"><p class="message-not-found-results">Unfortunately, <span class="no-results-grey">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p></li>`;
-
-      refs.exercisesList.innerHTML = `<li>Unfortunately, no results were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</li>`;
     }
   } catch (error) {
     console.log(error);
