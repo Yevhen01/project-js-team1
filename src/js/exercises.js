@@ -309,7 +309,11 @@ async function filterExercisesBySearch(filter, value, keyword) {
       renderExercisesPagination(data.totalPages, filter, value, keyword);
     } else {
       refs.paginationFilter.innerHTML = '';
+
       refs.exercisesList.innerHTML = `<li class="not-found-results"><p class="message-not-found-results">Unfortunately, <span class="no-results-grey">no results</span> were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</p></li>`;
+
+      refs.exercisesList.innerHTML = `<li>Unfortunately, no results were found. You may want to consider other search options to find the exercise you are looking for. Our range is wide and you have the opportunity to find more options that suit your needs.</li>`;
+
     }
   } catch (error) {
     console.log(error);
