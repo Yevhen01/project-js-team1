@@ -43,6 +43,7 @@
   margin-top: 25px;
 }
 
+/* TABLET */
 @media screen and (min-width: 768px) {
   .daily-item {
     max-width: 736px;
