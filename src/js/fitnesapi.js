@@ -1,4 +1,3 @@
-// Fetch http requests to the server side
 import axios from 'axios';
 
 const BASE_URL = 'https://energyflow.b.goit.study/api';
