@@ -197,9 +197,11 @@
     }
   
     .favorites-container-header {
+      margin-top: 156px;
       display: flex;
       justify-content: center;
       width: 1408px;
+      
     }
     .favorites-img {
       width: 352px;
@@ -218,3 +220,5 @@
       background-image: url(../img/favorites-main/favorites-desktop@2.jpg);
     }
   }
+
+  
