@@ -1,3 +1,6 @@
+
+<section class="favorites-box">
+    <div class="favorites-container-header container">
 <!-- Секція "favorites-box" для відображення блоку уподобань -->
 <section class="favorites-box">
     <!-- Контейнер заголовка блоку уподобань -->
@@ -20,7 +23,9 @@
             <use href="./img/icons.svg#icon-run-man"></use>
           </svg>
         </div>
-        
+        <div class="quote-info-content">
+          <h2 class="quote-title">Quote of the day</h2>
+        </div>
         <!-- Контейнер інформації про цитату -->
         <div class="quote-info-content">
           <!-- Заголовок блоку цитати -->
@@ -34,7 +39,7 @@
           </svg>
         </div>
       </div>
-      
+      <div class="favorites-main-box">
       <!-- Блок основного вмісту блоку уподобань -->
       <div class="favorites-main-box">
         
@@ -44,6 +49,8 @@
           data-aos="fade-down"
           data-aos-duration="2000"
         >
+          <div class="favorites-img"></div>
+        </div>
           <!-- Зображення уподобань -->
           <div class="favorites-img"></div>
         </div>
@@ -54,6 +61,7 @@
           data-aos="fade-left"
           data-aos-duration="2000"
         >
+          <div class="favorites-info-content">
           <!-- Контент інформації про уподобання -->
           <div class="favorites-info-content">
             
@@ -62,6 +70,11 @@
               class="favorites-info-icon"
               width="20"
               height="20"
+              aria-label="icon-dumbbell"
+            >
+              <use href="./img/icons.svg#icon-fitness"></use>
+            </svg>
+            <h2 class="favorites-info-title">110 min</h2>
               aria-label="icon-fitness"
             >
               <use href="./img/icons.svg#icon-fitness"></use>
