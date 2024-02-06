@@ -5,7 +5,6 @@ import "izitoast/dist/css/iziToast.min.css";
 const subscriptionForm = document.getElementById('subscriptionForm');
 const emailInput = document.getElementById('email');
 
-
 subscriptionForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
