@@ -29,3 +29,5 @@ function closeModal(e) {
   e.preventDefault();
   exercisesModal.classList.add('is-hidden');
 }
+
+// =
