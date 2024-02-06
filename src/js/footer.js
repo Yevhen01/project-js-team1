@@ -8,12 +8,9 @@ subscriptionForm.addEventListener('submit', function (event) {
 
     event.preventDefault();
 
-
     const emailValue = emailInput.value.trim();
 
-
     if (!isValidEmail(emailValue)) {
-
         iziToast.error({
             title: 'error',
             message: 'Sorry, not valid email. Please try again!',
@@ -36,40 +33,6 @@ function isValidEmail(email) {
 }
 
 function sendSubscriptionRequest(email) {
-
-
-    const backendURL = 'https://energyflow.b.goit.study/api/subscription';
-    const data = {
-        email: email,
-
-    };
-
-
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-
-        },
-        body: JSON.stringify(data),
-    };
-
-
-    fetch(backendURL, requestOptions)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Відповідь від бекенду:', data);
-            emailInput.value = '';
-
-        })
-        .catch(error => {
-            console.error('Помилка відправки запиту на бекенд:', error);
-        });
 
   console.log('POST');
   const backendURL = 'https://energyflow.b.goit.study/api/subscription';

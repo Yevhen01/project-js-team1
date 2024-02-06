@@ -13,7 +13,7 @@
 #email:focus {
     outline: none;
 }
- 
+
 
 @media screen and (max-width: 767px) {
     .footer-backgrounde {
@@ -158,13 +158,13 @@
         line-height: 10px;
         letter-spacing: -0.24px;
         padding-left: 20px;
-<<<<<<< Updated upstream
-        position: absolute;
-        bottom: 20px;
-=======
+
+        /* position: absolute;
+        bottom: 20px; */
+
         padding-top: 60px;
         padding-bottom: 20px;
->>>>>>> Stashed changes
+
     }
 
     .policy-links {
@@ -172,7 +172,7 @@
         gap: 8px;
         padding-top: 10px;
     }
-       
+
 }
 
 
@@ -311,22 +311,22 @@
         line-height: 18px;
         letter-spacing: -0.28px;
         gap: 32px;
-<<<<<<< Updated upstream
-        position: absolute;
+
+        /* position: absolute;
         bottom: 20px;
-        left: 25%;
-=======
+        left: 25%; */
+
         padding-bottom: 32px;
         padding-top: 120px;
         justify-content: center;
->>>>>>> Stashed changes
+
     }
 
     .policy-links {
         display: flex;
         gap: 8px;
     }
-    
+
 }
 
 
@@ -368,19 +368,20 @@
     }
 
     .copyright-info {
-<<<<<<< Updated upstream
-        position: absolute;
+
+        /* position: absolute;
         bottom: 26px;
         transform: translateX(-50%);
         text-align: center;
-        left: 50%;
-=======
+        left: 50%; */
+
         padding-top: 160px;
         padding-bottom: 26px;
 
->>>>>>> Stashed changes
+
     }
 }
+
 .iziToast {
     border-radius: 20px;
     margin-bottom: 20px;
