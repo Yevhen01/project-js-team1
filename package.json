@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-js-team/",
+    "build": "vite build --base=/project-js-team1/",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -15,6 +15,7 @@
   "author": "Project JS Team",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^1.6.7",
     "izitoast": "^1.4.0",
     "vite-plugin-full-reload": "^1.0.5",
