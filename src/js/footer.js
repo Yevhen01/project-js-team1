@@ -1,11 +1,11 @@
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
-
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const subscriptionForm = document.getElementById('subscriptionForm');
 const emailInput = document.getElementById('email');
 
 subscriptionForm.addEventListener('submit', function (event) {
+
     event.preventDefault();
 
     const emailValue = emailInput.value.trim();
@@ -24,40 +24,43 @@ subscriptionForm.addEventListener('submit', function (event) {
     }
 
     sendSubscriptionRequest(emailValue);
+
 });
 
 function isValidEmail(email) {
-    const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-    return emailRegex.test(email);
+  const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+  return emailRegex.test(email);
 }
 
 function sendSubscriptionRequest(email) {
-    const backendURL = 'https://energyflow.b.goit.study/api/subscription';
-    const data = {
-        email: email,
-    };
 
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    };
+  console.log('POST');
+  const backendURL = 'https://energyflow.b.goit.study/api/subscription';
+  const data = {
+    email: email,
+  };
 
-    fetch(backendURL, requestOptions)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Відповідь від бекенду:', data);
-            emailInput.value = '';
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  };
 
-        })
-        .catch(error => {
-            console.error('Помилка відправки запиту на бекенд:', error);
-        });
+  fetch(backendURL, requestOptions)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Відповідь від бекенду:', data);
+      emailInput.value = '';
+    })
+    .catch(error => {
+      console.error('Помилка відправки запиту на бекенд:', error);
+    });
+
 }

@@ -3,7 +3,7 @@
     width: 335px;
     height: 272px;
     border-radius: 30px;
-    background-image: url(../img/qoute/qoute-favorites-desc.webp);
+    background-image: url(../img/favorites-main/favorites-mobile.jpg);
     background-repeat: no-repeat;
   }
   
@@ -11,7 +11,7 @@
     screen and (min-resolution: 2dppx) and (min-width: 375px),
     screen and (min-device-pixel-ratio: 2) and (min-width: 375px) {
     .favorites-img {
-      background-image: url(../img/qoute/qoute-favorites-desc@2x.webp);
+      background-image: url(../img/favorites-main/favorites-mobile@2.jpg);
       background-size: 335px;
     }
   }
@@ -122,6 +122,7 @@
   
   .favorites-info-icon {
     margin-bottom: 15px;
+    fill:#1b1b1b;
   }
   
   /* TABLET */
@@ -130,7 +131,7 @@
       width: 368px;
       height: 302px;
       border-radius: 50px;
-      background-image: url(../img/qoute/qoute-favorites-desc.webp);
+      background-image: url(../img/favorites-main/favorites-tablet.jpg);
     }
   
     .favorites-quote-block {
@@ -174,7 +175,6 @@
     .favorites-info-title {
       font-size: 24px;
       line-height: 1.3;
-      /* 133.333% */
     }
   
     .favorites-info-container {
@@ -185,7 +185,7 @@
     screen and (min-resolution: 2dppx) and (min-width: 768px),
     screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
     .favorites-img {
-      background-image: url(../img/qoute/qoute-favorites-desc@2x.webp);
+      background-image: url(../img/favorites-main/favorites-tablet@2.jpg);
       background-size: 368px;
     }
   }
@@ -203,7 +203,7 @@
     }
     .favorites-img {
       width: 352px;
-      background-image: url(../img/qoute/qoute-favorites-desc.webp);
+      background-image: url(../img/favorites-main/favorites-desktop.jpg);
       background-size: 352px;
     }
   
@@ -215,7 +215,6 @@
     screen and (min-resolution: 2dppx) and (min-width: 1280px),
     screen and (min-device-pixel-ratio: 2) and (min-width: 1280px) {
     .favorites-img {
-      background-image: url(../img/qoute/qoute-favorites-desc@2x.webp);
+      background-image: url(../img/favorites-main/favorites-desktop@2.jpg);
     }
   }
-  

@@ -1,4 +1,3 @@
-// Fetch http requests to the server side
 import axios from 'axios';
 
 const BASE_URL = 'https://energyflow.b.goit.study/api';
@@ -24,19 +23,25 @@ export async function getFilter(filter, currentPage) {
 
 export async function getExercises(page, filter, value, keyword) {
   const url = `${BASE_URL}/exercises`;
+  let params = { [filter]: value, page, limit };
+
   if (window.screen.width > windowWidth) {
     limit = 9;
   }
-  let response;
-  if (keyword === undefined) {
-    response = await axios.get(url, {
-      params: { [filter]: value, page, limit },
-    });
-  } else {
-    response = await axios.get(url, {
-      params: { [filter]: value, page, limit, keyword },
-    });
+
+  if (keyword !== undefined) {
+    params.keyword = keyword;
   }
+
+  const response = await axios.get(url, { params });
+
+  return response.data;
+}
+
+export async function getExercisesById(id) {
+  const url = `${BASE_URL}/exercises/${id}`;
+
+  const response = await axios.get(url);
 
   return response.data;
 }

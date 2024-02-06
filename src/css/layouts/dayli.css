@@ -1,9 +1,10 @@
 .daily-section {
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .daily-wrapper {
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,17 +14,17 @@
 .daily-list {
   display: flex;
   flex-direction: column;
+  border-radius: 50px;
 }
 
 .daily-item {
   max-width: 335px;
-  max-height: 269px;
 }
 
- .daily-img-item {
-		overflow: hidden;
-		border-radius: 50px;
-  }
+.daily-img-item {
+  overflow: hidden;
+  border-radius: 50px;
+}
 
 .daily-info-item-container {
   max-width: 335px;
@@ -37,14 +38,19 @@
 
 .dail-info-item-title {
   color: #f6f6f6;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
 }
 
 .dail-info-item-text {
   margin-top: 25px;
 }
 
+/* TABLET */
 @media screen and (min-width: 768px) {
+  .daily-section {
+    margin-bottom: 16px;
+  }
+
   .daily-item {
     max-width: 736px;
     height: 302px;
@@ -53,8 +59,8 @@
   .daily-img-item {
     max-height: 302px;
     max-width: 736px;
-		overflow: hidden;
-		border-radius: 50px;
+    overflow: hidden;
+    border-radius: 50px;
   }
 
   .daily-info-item-container {
@@ -67,6 +73,7 @@
   .daily-list {
     flex-direction: row;
   }
+  
   .daily-item {
     max-width: 704px;
     height: 302px;
@@ -120,6 +127,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .daily-section {
+    margin-bottom: 16px;
+  }
+
   .daily-img {
     background-image: url(../../img/daily/daily-desc@2x.jpg);
   }
