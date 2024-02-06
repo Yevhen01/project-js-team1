@@ -38,7 +38,7 @@
   }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1440px) {
   .modal-box {
     gap: 40px;
     width: 732px;
@@ -50,7 +50,7 @@
   top: 14px;
   right: 14px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   width: 24px;
   height: 24px;
@@ -59,6 +59,7 @@
   border-radius: 50%;
   background-color: transparent;
   margin-bottom: 2px;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -71,7 +72,7 @@
   }
 }
 
-.close {
+.close-icon {
   stroke: #1B1B1B;
 }
 
@@ -86,7 +87,7 @@
   }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1440px) {
   .modal-content {
     gap: 40px;
   }
@@ -109,7 +110,6 @@
 @media only screen and (min-width: 768px) {
   .modal-gif {
     margin-bottom: 0;
-    display: flex;
     width: 270px;
     height: 259px;
     padding: 45px 105px;
@@ -119,7 +119,6 @@
 }
 
 .modal-title {
-  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   line-height: 1.33333;
   color: #1b1b1b;
@@ -156,7 +155,6 @@
 }
 
 .average-rating {
-  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
@@ -181,8 +179,6 @@
     gap: 16px;
   }
 }
-
-@media only screen and (min-width: 1158px) {}
 
 .exercises-short-list {
   display: flex;
@@ -238,18 +234,22 @@
 
 .modal-buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 9px;
 }
 
 @media only screen and (min-width: 768px) {
   .modal-buttons {
+    flex-wrap: nowrap;
     justify-content: flex-end;
+    flex-direction: row;
   }
 }
 
 .modal-btn {
   display: flex;
+  width: 100%;
   height: 42px;
   padding: 12px 80px;
   justify-content: center;
@@ -269,16 +269,18 @@
 @media only screen and (min-width: 768px) {
   .modal-btn {
     justify-content: flex-end;
-    padding: 12px 24px;
+    padding: 12px 22px;
     gap: 8px;
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
+    height: 46px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .modal-btn {
+    width: 194px;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -286,4 +288,108 @@
 
 .btn-heart {
   fill: #7e847f;
+}
+
+.give-btn {
+  background-color: transparent;
+  border: 1px solid #1B1B1B;
+  color: #1B1B1B;
+}
+
+@media only screen and (min-width: 768px) {
+  .give-btn {
+    width: 141px;
+  }
+}
+
+.get-rating {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 335px;
+  height: 357px;
+  padding: 40px 20px;
+  border-radius: 20px;
+  background: #F6F6F6;
+
+}
+
+.get-rating-title {
+  color: rgba(27, 27, 27, 0.40);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px
+}
+
+.star-rating {
+  font-size: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+  width: 90px;
+  height: 18px;
+  overflow: hidden;
+  position: relative;
+  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+  background-size: contain;
+}
+
+.star-rating i {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  z-index: 1;
+  background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+  background-size: contain;
+}
+
+.star-rating input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.star-rating input:hover + i,
+.star-rating input:checked + i {
+  opacity: 1;
+}
+
+.star-rating i ~ i {
+  width: 40%;
+}
+
+.star-rating i ~ i ~ i {
+  width: 60%;
+}
+
+.star-rating i ~ i ~ i ~ i {
+  width: 80%;
+}
+
+.star-rating i ~ i ~ i ~ i ~ i {
+  width: 100%;
+}
+
+::after,
+::before {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.is-hidden {
+  display: none;
 }
