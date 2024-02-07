@@ -12,19 +12,27 @@ document.addEventListener('click', function (e) {
   if (!modalContainer.contains(e.target)) closeModalContainer();
 });
 
-function closeModalContainer() {
-  modalWindow.classList.add('is-hidden');
-}
-
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     closeModalContainer();
   }
 });
 
+function closeModalContainer() {
+  modalWindow.classList.add('is-hidden');
+
+  // removeListener();
+}
+
+// function removeListener() {
+//   modalCloseBtn.removeEventListener('click', closeModalContainer);
+//   document.removeEventListener('click', closeOnOutsideClick);
+//   document.removeEventListener('keydown', closeOnEscape);
+// }
+
 addToFavoritesBtn.addEventListener('click', handleAddToFavorites);
 
-export function openExerciseModal(exerciseDetails) {
+function openExerciseModal(exerciseDetails) {
   modalWindow.classList.remove('is-hidden');
 
   modalWindow.querySelector('.modal-title').innerHTML = exerciseDetails.name;
