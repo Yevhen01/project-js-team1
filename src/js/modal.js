@@ -3,6 +3,8 @@ const modalContainer = document.querySelector('.modal-box');
 const modalCloseBtn = document.querySelector('.modal-close');
 const addToFavoritesBtn = modalWindow.querySelector('.js-btn-add');
 const btnText = modalWindow.querySelector('.btn-text');
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+let favorite = {};
 
 modalCloseBtn.addEventListener('click', closeModalContainer);
 
@@ -14,11 +16,13 @@ function closeModalContainer() {
   modalWindow.classList.add('is-hidden');
 }
 
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeModalContainer();
+  }
+});
 
 addToFavoritesBtn.addEventListener('click', handleAddToFavorites);
-
-let favorite = {};
 
 export function openExerciseModal(exerciseDetails) {
   modalWindow.classList.remove('is-hidden');
@@ -40,6 +44,16 @@ export function openExerciseModal(exerciseDetails) {
     exerciseDetails.burnedCalories;
   modalWindow.querySelector('.modal-description').textContent =
     exerciseDetails.description;
+
+  const ratingValue = Math.round(exerciseDetails.rating);
+  const stars = modalWindow.querySelectorAll('.star-icon');
+
+  for (let i = 0; i < stars.length; i++) {
+    const starSvg = stars[i].querySelector('.star-icon use');
+    if (i < ratingValue) {
+      starSvg.setAttribute('href', '../img/icons.svg#icon-star-full');
+    }
+  }
 
   favorite = { ...exerciseDetails };
 
