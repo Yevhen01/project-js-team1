@@ -3,6 +3,8 @@ const modalContainer = document.querySelector('.modal-box');
 const modalCloseBtn = document.querySelector('.modal-close');
 const addToFavoritesBtn = modalWindow.querySelector('.js-btn-add');
 const btnText = modalWindow.querySelector('.btn-text');
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+let favorite = {};
 
 modalCloseBtn.addEventListener('click', closeModalContainer);
 
@@ -20,14 +22,9 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
 addToFavoritesBtn.addEventListener('click', handleAddToFavorites);
 
-let favorite = {};
-
 export function openExerciseModal(exerciseDetails) {
-  console.log(exerciseDetails);
   modalWindow.classList.remove('is-hidden');
   modalWindow.querySelector('.modal-title').innerHTML = exerciseDetails.name;
   modalWindow.querySelector(
