@@ -1,6 +1,6 @@
 import { getFilter, getExercises, getExercisesById } from './fitnesapi';
 import { openExerciseModal } from './modal';
-import { capitalizeFirstLetter, truncateText } from './helpers/string_utils';
+import { capitalizeFirstLetter } from './helpers/string_utils';
 
 const refs = {
   musclesBtn: document.querySelector('.muscles-btn'),
@@ -13,6 +13,8 @@ const refs = {
   searchForm: document.querySelector('.search-form'),
   removeBtn: document.querySelector('.remove-btn'),
   searchInput: document.querySelector('.search-exercise-input'),
+  loader: document.querySelector('.loader'),
+  exercisesSection: document.querySelector('.exercises-section'),
 };
 
 refs.musclesBtn.addEventListener('click', () =>
@@ -33,6 +35,7 @@ refs.removeBtn.addEventListener('click', e => {
   e.preventDefault();
   onRemoveInputValue(refs.searchInput);
 });
+refs.searchForm.addEventListener('submit', onExercisesSearch);
 
 refs.searchInput.addEventListener('input', () => {
   if (refs.searchInput.value.trim() !== '') {
@@ -46,7 +49,6 @@ let currentPage = 1;
 let totalPages = 1;
 
 function renderMarkup(data) {
-  refs.exercisesList.innerHTML = '';
   refs.searchForm.style.display = 'none';
   const markup = data
     .map(
@@ -106,18 +108,26 @@ async function onPageClick(page, filter, event) {
 
   clickedButton.classList.add('active');
   currentPage = page;
-
+  refs.exercisesList.innerHTML = '';
+  refs.filterList.innerHTML = '';
+  refs.loader.style.display = 'block';
   try {
     const { data } = await getFilter(filter, currentPage);
+    refs.exercisesSection.scrollIntoView({ behavior: 'smooth' });
     renderMarkup(data.results);
   } catch (error) {
     console.log(error);
+  } finally {
+    refs.loader.style.display = 'none';
   }
 }
 
 async function onFilterClick(clickedBtn, filter) {
   currentPage = 1;
   refs.exercisesTitle.innerHTML = '';
+  refs.filterList.innerHTML = '';
+  refs.exercisesList.innerHTML = '';
+  refs.loader.style.display = 'block';
   document
     .querySelectorAll('.exercises-btn')
     .forEach(btn => btn.classList.remove('active'));
@@ -131,6 +141,8 @@ async function onFilterClick(clickedBtn, filter) {
     renderPagination(filter);
   } catch (error) {
     console.log(error);
+  } finally {
+    refs.loader.style.display = 'none';
   }
 }
 
@@ -144,15 +156,18 @@ async function onItemClickGetExercises(filterListItem) {
   const value = filterListItem.dataset.name;
   refs.exercisesTitle.innerHTML = ` /<span class="exercises-title-grey"> ${value}</span>`;
   let page = 1;
+  refs.filterList.innerHTML = '';
+  refs.exercisesList.innerHTML = '';
+  refs.loader.style.display = 'block';
   try {
     const data = await getExercises(page, filter, value);
     renderMarkupExrcises(data.results);
-    refs.searchForm.addEventListener('submit', event =>
-      onExercisesSearch(event, filter, value)
-    );
+
     renderExercisesPagination(data.totalPages, filter, value);
   } catch (error) {
     console.log(error);
+  } finally {
+    refs.loader.style.display = 'none';
   }
 }
 
@@ -203,19 +218,21 @@ async function onPageClickExercises(page, filter, event, value, keyword) {
   }
 
   clickedButton.classList.add('active');
-
+  refs.exercisesList.innerHTML = '';
+  refs.loader.style.display = 'block';
   try {
     const data = await getExercises(page, filter, value, keyword);
+    refs.exercisesSection.scrollIntoView({ behavior: 'smooth' });
     renderMarkupExrcises(data.results);
   } catch (error) {
     console.log(error);
+  } finally {
+    refs.loader.style.display = 'none';
   }
 }
 
 function renderMarkupExrcises(data) {
-  refs.filterList.innerHTML = '';
   refs.searchForm.style.display = 'block';
-
   const markup = data
     .map(
       item => `
@@ -223,7 +240,7 @@ function renderMarkupExrcises(data) {
         <div class="item-top-container">
           <div class="icon-star-container">
             <p class="workout">workout</p>
-            <p class="rating">${Math.round(item.rating)}</p>
+            <p class="rating">${Math.round(item.rating) + '.0'}</p>
               <svg class="icon-star-svg" width="18" height="18">
                 <use href="./img/icons.svg#icon-star-full"></use>
               </svg>
@@ -241,11 +258,10 @@ function renderMarkupExrcises(data) {
           <svg class="icon-run-svg" width="32" height="32">
             <use href="./img/icons.svg#icon-run"></use>
           </svg>
-          <h3 class="exe-card-title">${truncateText(item.name)}</h3>
+          <h3 class="exe-card-title">${capitalizeFirstLetter(item.name)}</h3>
         </div>
 
         <div class="item-bottom-container">
-          <div class="bottom-one-info-container">
             <p class="bottom-info-text">
               <span class="bottom-span-text">Burned calories:</span> ${
                 item.burnedCalories
@@ -256,14 +272,12 @@ function renderMarkupExrcises(data) {
                 item.bodyPart
               )}
             </p>
-          </div>
-          <div class="bottom-two-info-container">
             <p class="bottom-info-text">
               <span class="bottom-span-text">Target:</span> ${capitalizeFirstLetter(
                 item.target
               )}
             </p>
-          </div>
+
         </div>
     </li>`
     )
@@ -272,6 +286,10 @@ function renderMarkupExrcises(data) {
   refs.exercisesList.innerHTML = markup;
   refs.exercisesList.addEventListener('click', onExercisesClick);
 }
+
+// function capitalizeFirstLetter(text) {
+//   return text.charAt(0).toUpperCase() + text.slice(1);
+// }
 
 function attachClickEventToItem(item) {
   const filterListItem = document.querySelector(
@@ -282,13 +300,24 @@ function attachClickEventToItem(item) {
   );
 }
 
-function onExercisesSearch(event, filter, value) {
+function onExercisesSearch(event) {
   event.preventDefault();
+
   refs.removeBtn.style.display = 'none';
-  const searchValue = refs.searchForm.elements['search-exercises'].value
-    .toLowerCase()
-    .trim();
-  filterExercisesBySearch(filter, value, searchValue);
+
+  const keyword = refs.searchInput.value.trim().toLowerCase();
+  if (keyword !== '') {
+    let filter = document
+      .querySelector('.exercises-btn.active')
+      .textContent.toLowerCase()
+      .trim();
+    if (filter === 'body parts') {
+      filter = 'bodypart';
+    }
+    const value = refs.exercisesTitle.textContent.slice(3).toLowerCase().trim();
+    console.log(value);
+    filterExercisesBySearch(filter, value, keyword);
+  }
 }
 
 function onRemoveInputValue(inputField) {
@@ -300,6 +329,8 @@ async function filterExercisesBySearch(filter, value, keyword) {
   if (keyword === '') {
     return;
   }
+  refs.exercisesList.innerHTML = '';
+  refs.loader.style.display = 'block';
   let page = 1;
   try {
     const data = await getExercises(page, filter, value, keyword);
@@ -314,6 +345,7 @@ async function filterExercisesBySearch(filter, value, keyword) {
     console.log(error);
   } finally {
     refs.searchForm.reset();
+    refs.loader.style.display = 'none';
   }
 }
 
