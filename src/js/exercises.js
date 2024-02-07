@@ -222,7 +222,7 @@ function renderMarkupExrcises(data) {
         <div class="item-top-container">
           <div class="icon-star-container">
             <p class="workout">workout</p>
-            <p class="rating">${Math.ceil(item.rating)}</p>
+            <p class="rating">${Math.round(item.rating)}</p>
               <svg class="icon-star-svg" width="18" height="18">
                 <use href="./img/icons.svg#icon-star-full"></use>
               </svg>
@@ -234,7 +234,6 @@ function renderMarkupExrcises(data) {
                 <use href="./img/icons.svg#icon-right-sm-arrow"></use>
               </svg>
             </a>
-
         </div>
 
         <div class="item-middle-container">
