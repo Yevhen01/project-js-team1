@@ -77,10 +77,13 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
 }
 
+.search-btn {
+    top: 55%;
+}
+
 .search-btn,
 .remove-btn {
     position: absolute;
-    top: 50%;
     right: 14px;
     transform: translateY(-50%);
     background-color: transparent;
@@ -89,6 +92,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .remove-btn {
     display: none;
+    top: 50%;
     right: 37px;
 }
 

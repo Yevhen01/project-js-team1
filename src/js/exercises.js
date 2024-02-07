@@ -1,5 +1,5 @@
 import { getFilter, getExercises, getExercisesById } from './fitnesapi';
-// import { openExerciseModal } from './modal';
+import { openExerciseModal } from './modal';
 
 const refs = {
   musclesBtn: document.querySelector('.muscles-btn'),
@@ -222,7 +222,7 @@ function renderMarkupExrcises(data) {
         <div class="item-top-container">
           <div class="icon-star-container">
             <p class="workout">workout</p>
-            <p class="rating">${Math.ceil(item.rating)}</p>
+            <p class="rating">${Math.round(item.rating)}</p>
               <svg class="icon-star-svg" width="18" height="18">
                 <use href="./img/icons.svg#icon-star-full"></use>
               </svg>
@@ -234,7 +234,6 @@ function renderMarkupExrcises(data) {
                 <use href="./img/icons.svg#icon-right-sm-arrow"></use>
               </svg>
             </a>
-
         </div>
 
         <div class="item-middle-container">
@@ -358,7 +357,7 @@ function onExercisesClick(event) {
 async function onArrowClick(exerciseId) {
   try {
     const exerciseDetails = await getExercisesById(exerciseId);
-    // openExerciseModal(exerciseDetails);
+    openExerciseModal(exerciseDetails);
   } catch (error) {
     console.log(error);
   }
