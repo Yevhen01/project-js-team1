@@ -2,10 +2,27 @@ import { capitalizeFirstLetter } from './helpers/string_utils';
 import { getExercisesById } from './fitnesapi';
 import { openExerciseModal } from './modal';
 
+// SETUP REFERENCE TO FUNCTION
+// import { removeFromFavorites } from './modal';
+
 const favoritesList = document.querySelector('[data-name="favorites-list"]');
 const favoritesEmpty = document.querySelector('[data-name="favorites-empty"]');
 const modalWindow = document.querySelector('.modal');
 const addToFavoritesBtn = modalWindow.querySelector('.js-btn-add');
+
+// SELECT ELEMENT
+// const removeFromFavoritesBtn = document.querySelector('.trash-link');
+
+// console.log(removeFromFavoritesBtn);
+
+// EVENT LISTENER
+// removeFromFavoritesBtn.addEventListener('click', onClickDeleteItem);
+
+// FUNCTION TO DELETE
+// const onClickDeleteItem = exerciseDetails => {
+//   removeFromFavorites(exerciseDetails._id);
+//   console.log(exerciseDetails._id);
+// };
 
 addToFavoritesBtn.addEventListener('click', () => {
   checkFavorites();
@@ -50,12 +67,14 @@ const checkFavorites = () => {
    <li class="exe-info-list-item" data-id="${item._id}">
         <div class="item-top-container">
           <div class="icon-star-container">
-            <p class="workout">workout</p>
-            <p class="rating">${Math.round(item.rating)}</p>
-              <svg class="icon-star-svg" width="18" height="18">
-                <use href="./img/icons.svg#icon-star-full"></use>
-              </svg>
-           </div>
+          <p class="workout">workout</p>
+          <div></div>
+            <a href="#" class="trash-link">
+                <svg class="icon-trash-svg" width="16" height="36">
+                  <use href="../img/icons.svg#icon-trash"></use>
+                </svg>
+              </a>
+          </div>
 
             <a href="#" class="icon-arrow-container >
             <p class="exe-top-text">Start</p>

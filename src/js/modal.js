@@ -103,7 +103,7 @@ function addToFavorites(exerciseDetails) {
   localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
 }
 
-function removeFromFavorites(exerciseId) {
+export function removeFromFavorites(exerciseId) {
   const updatedFavorites = favorites.filter(
     exercise => exercise._id !== exerciseId
   );
