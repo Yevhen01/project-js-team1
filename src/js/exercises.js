@@ -1,5 +1,6 @@
 import { getFilter, getExercises, getExercisesById } from './fitnesapi';
 import { openExerciseModal } from './modal';
+import { capitalizeFirstLetter, truncateText } from './helpers/string_utils';
 
 const refs = {
   musclesBtn: document.querySelector('.muscles-btn'),
@@ -270,30 +271,6 @@ function renderMarkupExrcises(data) {
 
   refs.exercisesList.innerHTML = markup;
   refs.exercisesList.addEventListener('click', onExercisesClick);
-}
-
-function truncateText(text) {
-  let maxChars = 20;
-
-  if (!text || text.length <= 0) {
-    return text;
-  }
-
-  if (window.screen.width > 1440) {
-    maxChars = 30;
-  } else if (window.screen.width < 375) {
-    maxChars = 10;
-  }
-
-  if (text.length > maxChars) {
-    text = text.slice(0, maxChars) + '...';
-  }
-
-  return capitalizeFirstLetter(text);
-}
-
-function capitalizeFirstLetter(text) {
-  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 function attachClickEventToItem(item) {
