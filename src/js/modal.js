@@ -32,7 +32,7 @@ function closeModalContainer() {
 
 addToFavoritesBtn.addEventListener('click', handleAddToFavorites);
 
-function openExerciseModal(exerciseDetails) {
+export function openExerciseModal(exerciseDetails) {
   modalWindow.classList.remove('is-hidden');
 
   modalWindow.querySelector('.modal-title').innerHTML = exerciseDetails.name;
