@@ -98,6 +98,10 @@
   }
 }
 
+.icon-trash-svg {
+  fill: #f6f6f6;
+}
+
 @media screen and (min-width: 1440px) {
   .favorites-main-empty {
     top: 50%;
