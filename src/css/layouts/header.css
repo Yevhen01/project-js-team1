@@ -161,7 +161,6 @@
   }
 
   .logo-mobile {
-    /* padding-top: 20px; */
     font-weight: 700;
     line-height: 1, 12;
     letter-spacing: -0.02em;
@@ -197,7 +196,12 @@
   .icon-close-svg {
     stroke: var(--light-color);
   }
-  .is-hidden {
+  .toggle-mobile-menu-svg.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .logo.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
