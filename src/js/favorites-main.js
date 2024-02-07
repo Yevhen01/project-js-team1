@@ -3,7 +3,7 @@ import { getExercisesById } from './fitnesapi';
 import { openExerciseModal } from './modal';
 
 // SETUP REFERENCE TO FUNCTION
-import { removeFromFavorites } from './modal';
+// import { removeFromFavorites } from './modal';
 
 const favoritesList = document.querySelector('[data-name="favorites-list"]');
 const favoritesEmpty = document.querySelector('[data-name="favorites-empty"]');
@@ -11,18 +11,18 @@ const modalWindow = document.querySelector('.modal');
 const addToFavoritesBtn = modalWindow.querySelector('.js-btn-add');
 
 // SELECT ELEMENT
-const removeFromFavoritesBtn = document.querySelector('.trash-link');
+// const removeFromFavoritesBtn = document.querySelector('.trash-link');
 
-console.log(removeFromFavoritesBtn);
+// console.log(removeFromFavoritesBtn);
 
 // EVENT LISTENER
-removeFromFavoritesBtn.addEventListener('click', onClickDeleteItem);
+// removeFromFavoritesBtn.addEventListener('click', onClickDeleteItem);
 
 // FUNCTION TO DELETE
-const onClickDeleteItem = exerciseDetails => {
-  removeFromFavorites(exerciseDetails._id);
-  console.log(exerciseDetails._id);
-};
+// const onClickDeleteItem = exerciseDetails => {
+//   removeFromFavorites(exerciseDetails._id);
+//   console.log(exerciseDetails._id);
+// };
 
 addToFavoritesBtn.addEventListener('click', () => {
   checkFavorites();
