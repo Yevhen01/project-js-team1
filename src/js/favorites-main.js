@@ -1,37 +1,46 @@
 import { capitalizeFirstLetter } from './helpers/string_utils';
 import { getExercisesById } from './fitnesapi';
-import { openExerciseModal } from './modal';
-
-// SETUP REFERENCE TO FUNCTION
-// import { removeFromFavorites } from './modal';
+import { openExerciseModal, removeFromFavorites } from './modal';
 
 const favoritesList = document.querySelector('[data-name="favorites-list"]');
 const favoritesEmpty = document.querySelector('[data-name="favorites-empty"]');
 const modalWindow = document.querySelector('.modal');
 const addToFavoritesBtn = modalWindow.querySelector('.js-btn-add');
 
-// SELECT ELEMENT
-// const removeFromFavoritesBtn = document.querySelector('.trash-link');
+const onClickDeleteItem = exerciseId => {
+  try {
+    removeFromFavorites(exerciseId);
+    checkFavorites();
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-// console.log(removeFromFavoritesBtn);
-
-// EVENT LISTENER
-// removeFromFavoritesBtn.addEventListener('click', onClickDeleteItem);
-
-// FUNCTION TO DELETE
-// const onClickDeleteItem = exerciseDetails => {
-//   removeFromFavorites(exerciseDetails._id);
-//   console.log(exerciseDetails._id);
-// };
+document.addEventListener('click', function (event) {
+  const target = event.target;
+  if (target && target.classList.contains('trash-icon')) {
+    const exerciseId = target.closest('.exe-info-list-item').dataset.id;
+    onClickDeleteItem(exerciseId);
+  }
+});
 
 addToFavoritesBtn.addEventListener('click', () => {
   checkFavorites();
 });
 
+const handleTrashLinkClick = link => {
+  const exerciseId = link.closest('.exe-info-list-item').dataset.id;
+  selectedExerciseId = exerciseId;
+  onClickDeleteItem(exerciseId);
+};
+
+favoritesList.querySelectorAll('.trash-link').forEach(link => {
+  link.addEventListener('click', () => handleTrashLinkClick(link));
+});
+
 const onExercisesClick = event => {
   event.preventDefault();
   const isArrowIcon = event.target.closest('.icon-arrow-container');
-
   if (isArrowIcon) {
     const exerciseItem = event.target.closest('[data-id]');
 
@@ -71,7 +80,7 @@ const checkFavorites = () => {
           <div></div>
             <a href="#" class="trash-link">
                 <svg class="icon-trash-svg" width="16" height="36">
-                  <use href="../img/icons.svg#icon-trash"></use>
+                  <use href="../img/icons.svg#icon-trash" class="trash-icon"></use>
                 </svg>
               </a>
           </div>
