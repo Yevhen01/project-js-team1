@@ -15,8 +15,10 @@
   "author": "Project JS Team",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^1.6.7",
     "izitoast": "^1.4.0",
+    "lodash": "^4.17.21",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }
