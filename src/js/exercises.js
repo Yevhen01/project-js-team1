@@ -34,6 +34,7 @@ refs.removeBtn.addEventListener('click', e => {
   e.preventDefault();
   onRemoveInputValue(refs.searchInput);
 });
+refs.searchForm.addEventListener('submit', onExercisesSearch);
 
 refs.searchInput.addEventListener('input', () => {
   if (refs.searchInput.value.trim() !== '') {
@@ -160,9 +161,7 @@ async function onItemClickGetExercises(filterListItem) {
   try {
     const data = await getExercises(page, filter, value);
     renderMarkupExrcises(data.results);
-    refs.searchForm.addEventListener('submit', event =>
-      onExercisesSearch(event, filter, value)
-    );
+
     renderExercisesPagination(data.totalPages, filter, value);
   } catch (error) {
     console.log(error);
@@ -300,13 +299,24 @@ function attachClickEventToItem(item) {
   );
 }
 
-function onExercisesSearch(event, filter, value) {
+function onExercisesSearch(event) {
   event.preventDefault();
+
   refs.removeBtn.style.display = 'none';
-  const searchValue = refs.searchForm.elements['search-exercises'].value
-    .toLowerCase()
-    .trim();
-  filterExercisesBySearch(filter, value, searchValue);
+
+  const keyword = refs.searchInput.value.trim().toLowerCase();
+  if (keyword !== '') {
+    let filter = document
+      .querySelector('.exercises-btn.active')
+      .textContent.toLowerCase()
+      .trim();
+    if (filter === 'body parts') {
+      filter = 'bodypart';
+    }
+    const value = refs.exercisesTitle.textContent.slice(3).toLowerCase().trim();
+    console.log(value);
+    filterExercisesBySearch(filter, value, keyword);
+  }
 }
 
 function onRemoveInputValue(inputField) {
