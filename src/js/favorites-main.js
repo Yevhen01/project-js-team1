@@ -1,4 +1,4 @@
-import { capitalizeFirstLetter, truncateText } from './helpers/string_utils';
+import { capitalizeFirstLetter } from './helpers/string_utils';
 import { getExercisesById } from './fitnesapi';
 import { openExerciseModal } from './modal';
 
@@ -69,7 +69,7 @@ const checkFavorites = () => {
           <svg class="icon-run-svg" width="32" height="32">
             <use href="./img/icons.svg#icon-run"></use>
           </svg>
-          <h3 class="exe-card-title">${truncateText(item.name)}</h3>
+          <h3 class="exe-card-title">${capitalizeFirstLetter(item.name)}</h3>
         </div>
 
         <div class="item-bottom-container">
