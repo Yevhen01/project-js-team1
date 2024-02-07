@@ -19,7 +19,6 @@
 
 .daily-item {
   max-width: 335px;
-  max-height: 269px;
 }
 
 .daily-img-item {
@@ -46,6 +45,7 @@
   margin-top: 25px;
 }
 
+/* TABLET */
 @media screen and (min-width: 768px) {
   .daily-section {
     margin-bottom: 16px;

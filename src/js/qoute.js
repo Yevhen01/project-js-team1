@@ -2,8 +2,8 @@ import axios from 'axios';
 import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const quoteElement = document.querySelector('.quotes-quote');
-const authorElement = document.querySelector('.quotes-author');
+const quoteElement = document.querySelector('[data-name="quote"]');
+const authorElement = document.querySelector('[data-name="author"]');
 
 const checkDates = (d1, d2) => {
   return (

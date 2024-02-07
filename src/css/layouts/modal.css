@@ -105,7 +105,7 @@
   border-radius: 12px;
   margin-bottom: 20px;
   overflow: hidden;
-  background-image: linear-gradient(#1B1B1B33 0,1),(#1B1B1B33 0,1);
+  background-image: linear-gradient(#1B1B1B33 0, 1), (#1B1B1B33 0, 1);
 }
 
 @media only screen and (min-width: 768px) {
@@ -127,7 +127,7 @@
   font-style: normal;
   line-height: 20px;
   text-transform: capitalize;
-  
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -176,7 +176,7 @@
   text-transform: capitalize;
 }
 
-.min{
+.min {
   text-transform: none;
 }
 
@@ -266,11 +266,14 @@
   color: #f6f6f6;
   border-radius: 30px;
   border: none;
+
+}
+
+.btn-text {
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  color: #f6f6f6;
 }
 
 @media only screen and (min-width: 768px) {
@@ -278,10 +281,13 @@
     justify-content: flex-end;
     padding: 12px 22px;
     gap: 8px;
+    height: 46px;
+  }
+
+  .btn-text {
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
-    height: 46px;
   }
 }
 
@@ -366,24 +372,24 @@
   position: relative;
 }
 
-.star-rating input:hover + i,
-.star-rating input:checked + i {
+.star-rating input:hover+i,
+.star-rating input:checked+i {
   opacity: 1;
 }
 
-.star-rating i ~ i {
+.star-rating i~i {
   width: 40%;
 }
 
-.star-rating i ~ i ~ i {
+.star-rating i~i~i {
   width: 60%;
 }
 
-.star-rating i ~ i ~ i ~ i {
+.star-rating i~i~i~i {
   width: 80%;
 }
 
-.star-rating i ~ i ~ i ~ i ~ i {
+.star-rating i~i~i~i~i {
   width: 100%;
 }
 
