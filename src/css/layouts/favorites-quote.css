@@ -1,0 +1,194 @@
+.favorites-quotes-section-cont {
+  margin-bottom: 20px;
+  padding-top: 96px;
+}
+
+.favorites-quotes-first,
+.favorites-quotes-second,
+.favorites-quotes-third {
+  border-radius: 30px;
+  height: 272px;
+}
+
+.favorites-quotes-first {
+  padding: 40px 20px;
+  background-color: var(--third-bg-color);
+  color: var(--light-color);
+  position: relative;
+  flex-basis: 100%;
+}
+
+.favorites-quotes-first-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.favorites-quotes-first-header-icon {
+  margin-right: 12px;
+}
+
+.favorites-quotes-first-header-title {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.favorites-quotes-quote-cont {
+  padding-left: 44px;
+}
+
+.favorites-quotes-quote {
+  font-size: 14px;
+  line-height: 1.28;
+  margin-bottom: 14px;
+  color: var(--third-color_alpha);
+}
+
+.favorites-quotes-author {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.favorites-quotes-second {
+  background-image: url("../../img/favorites/favorites-quote-mobile.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.favorites-quotes-third {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorites-quotes-fitness-icon {
+  margin-bottom: 15px;
+  fill: var(--dark-color);
+}
+
+.favorites-quotes-third-time {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.favorites-quotes-third-caption {
+  font-size: 14px;
+  line-height: 1.28;
+  color: rgba(27, 27, 27, 0.6);
+}
+
+
+@media (min-resolution: 192dpi) {
+  .favorites-quotes-second {
+    background-image: url("../../img/favorites/favorites-quote-mobile@2x.png");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .favorites-quotes-section-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 0;
+    padding-top: 180px;
+    margin-bottom: 16px;
+  }
+
+  .favorites-quotes-first,
+  .favorites-quotes-second,
+  .favorites-quotes-third {
+    border-radius: 50px;
+    height: 302px;
+  }
+
+  .favorites-quotes-first {
+    padding: 64px 80px;
+  }
+
+  .favorites-quotes-first-header {
+    margin-bottom: 16px;
+  }
+
+  .favorites-quotes-first-header-icon {
+    margin-right: 16px;
+  }
+
+  .favorites-quotes-first-header-title {
+    flex: 1;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .favorites-quotes-quote {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .favorites-quotes-quote-icon {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 32px;
+    right: 80px;
+  }
+
+  .favorites-quotes-second {
+    background-image: url("../../img/favorites/favorites-quote-tablet.png");
+    width: auto;
+    flex-basis: 50%;
+  }
+
+  .favorites-quotes-third {
+    flex-basis: 50%;
+  }
+
+  .favorites-quotes-third-time {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 768px) {
+  .favorites-quotes-second {
+    background-image: url("../../img/favorites/favorites-quote-tablet@2x.png");
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .favorites-quotes-section-cont {
+    flex-wrap: nowrap;
+    padding-top: 156px;
+  }
+
+  .favorites-quotes-first {
+    padding: 64px;
+    flex-basis: 50%;
+  }
+
+  .favorites-quotes-quote-icon {
+    right: 64px;
+  }
+
+  .favorites-quotes-second,
+  .favorites-quotes-third {
+    flex-basis: 25%;
+  }
+
+  .favorites-quotes-second {
+    background-image: url("../../img/favorites/favorites-quote-desktop.png");
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 1440px) {
+  .favorites-quotes-second {
+    background-image: url("../../img/favorites/favorites-quote-desktop@2x.png");
+  }
+}
