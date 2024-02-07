@@ -32,12 +32,35 @@
   text-align: center;
 }
 
+.favorites-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.favorites-exercises-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .favorites-main {
     border-radius: 50px;
     padding: 64px 48px;
-    height: 928px;
+    /* height: 928px; */
     position: relative;
+  }
+
+  .favorites-main:has(.favorites-main-empty:not(.favorites-visually-hidden)) {
+    height: 928px;
   }
 
   .favorites-main-title {
@@ -62,10 +85,29 @@
     font-size: 18px;
     line-height: 1.33;
   }
+
+  .favorites-exercises-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 24px;
+  }
+
+  .favorites-exercises-list li {
+    flex-basis: calc(50% - 12px);
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .favorites-main-empty {
     top: 50%;
+  }
+
+  .favorites-exercises-list {
+    gap: 28px 20px;
+  }
+
+  .favorites-exercises-list li {
+    flex-basis: calc(100% / 3 - 14px);
   }
 }

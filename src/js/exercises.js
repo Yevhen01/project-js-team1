@@ -1,5 +1,6 @@
 import { getFilter, getExercises, getExercisesById } from './fitnesapi';
 import { openExerciseModal } from './modal';
+import { capitalizeFirstLetter } from './helpers/string_utils';
 
 const refs = {
   musclesBtn: document.querySelector('.muscles-btn'),
@@ -286,9 +287,9 @@ function renderMarkupExrcises(data) {
   refs.exercisesList.addEventListener('click', onExercisesClick);
 }
 
-function capitalizeFirstLetter(text) {
-  return text.charAt(0).toUpperCase() + text.slice(1);
-}
+// function capitalizeFirstLetter(text) {
+//   return text.charAt(0).toUpperCase() + text.slice(1);
+// }
 
 function attachClickEventToItem(item) {
   const filterListItem = document.querySelector(
