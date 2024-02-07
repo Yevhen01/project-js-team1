@@ -5,26 +5,24 @@ const subscriptionForm = document.getElementById('subscriptionForm');
 const emailInput = document.getElementById('email');
 
 subscriptionForm.addEventListener('submit', function (event) {
+  event.preventDefault();
 
-    event.preventDefault();
+  const emailValue = emailInput.value.trim();
 
-    const emailValue = emailInput.value.trim();
+  if (!isValidEmail(emailValue)) {
+    iziToast.error({
+      title: 'error',
+      message: 'Sorry, not valid email. Please try again!',
+      position: 'bottomRight',
+      messageColor: '#f6f6f6',
+      backgroundColor: '#7e847f',
+      maxWidth: 300,
+    });
+    emailInput.value = '';
+    return;
+  }
 
-    if (!isValidEmail(emailValue)) {
-        iziToast.error({
-            title: 'error',
-            message: 'Sorry, not valid email. Please try again!',
-            position: 'bottomRight',
-            messageColor: '#f6f6f6',
-            backgroundColor: '#7e847f',
-            maxWidth: 300
-        });
-        emailInput.value = '';
-        return;
-    }
-
-    sendSubscriptionRequest(emailValue);
-
+  sendSubscriptionRequest(emailValue);
 });
 
 function isValidEmail(email) {
@@ -33,7 +31,6 @@ function isValidEmail(email) {
 }
 
 function sendSubscriptionRequest(email) {
-
   console.log('POST');
   const backendURL = 'https://energyflow.b.goit.study/api/subscription';
   const data = {
@@ -62,5 +59,4 @@ function sendSubscriptionRequest(email) {
     .catch(error => {
       console.error('Помилка відправки запиту на бекенд:', error);
     });
-
 }
