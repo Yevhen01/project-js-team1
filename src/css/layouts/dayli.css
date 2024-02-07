@@ -75,7 +75,7 @@
   .daily-list {
     flex-direction: row;
   }
-  
+
   .daily-item {
     max-width: 704px;
     height: 302px;
@@ -144,4 +144,8 @@
   .daily-img {
     background-image: url(../../img/daily/daily-desc@2x.jpg);
   }
+}
+
+.daily-icon {
+  stroke: #f6f6f6;
 }
