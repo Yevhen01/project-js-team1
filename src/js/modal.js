@@ -20,6 +20,12 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+addToFavoritesBtn.addEventListener('click', handleAddToFavorites);
+
+let favorite = {};
+
 export function openExerciseModal(exerciseDetails) {
   console.log(exerciseDetails);
   modalWindow.classList.remove('is-hidden');
@@ -49,37 +55,8 @@ export function openExerciseModal(exerciseDetails) {
     const starSvg = stars[i].querySelector('.star-icon use');
     if (i < ratingValue) {
       starSvg.setAttribute('href', '../img/icons.svg#icon-star-full');
-    } else {
-      starSvg.setAttribute('href', '../img/icons.svg#icon-star');
     }
   }
-}
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-addToFavoritesBtn.addEventListener('click', handleAddToFavorites);
-
-let favorite = {};
-
-export function openExerciseModal(exerciseDetails) {
-  modalWindow.classList.remove('is-hidden');
-  modalWindow.querySelector('.modal-title').innerHTML = exerciseDetails.name;
-  modalWindow.querySelector(
-    '.modal-gif'
-  ).style.backgroundImage = `linear-gradient(rgba(27, 27, 27, 0.2), rgba(27, 27, 27, 0.2)), url(${exerciseDetails.gifUrl})`;
-  modalWindow.querySelector('.average-rating').innerHTML =
-    exerciseDetails.rating;
-  modalWindow.querySelector('.modal-target').textContent =
-    exerciseDetails.target;
-  modalWindow.querySelector('.modal-dody-part').textContent =
-    exerciseDetails.bodyPart;
-  modalWindow.querySelector('.modal-equipment').textContent =
-    exerciseDetails.equipment;
-  modalWindow.querySelector('.modal-popular').textContent =
-    exerciseDetails.popularity;
-  modalWindow.querySelector('.modal-calories').textContent =
-    exerciseDetails.burnedCalories;
-  modalWindow.querySelector('.modal-description').textContent =
-    exerciseDetails.description;
 
   favorite = { ...exerciseDetails };
 
