@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (href.includes(page)) {
       link.classList.add('current');
     }
+    //  else {
+    //   link.classList.remove('current');
+    // }
   });
 });
 
