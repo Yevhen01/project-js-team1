@@ -69,6 +69,8 @@
   }
 }
 
+/* life */
+
 @media screen and (min-width: 1440px) {
   .daily-list {
     flex-direction: row;
