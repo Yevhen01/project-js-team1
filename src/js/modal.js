@@ -6,35 +6,37 @@ const btnText = modalWindow.querySelector('.btn-text');
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 let favorite = {};
 
-modalCloseBtn.addEventListener('click', closeModalContainer);
+function addListeners() {
+  document.addEventListener('click', closeOnOutsideClick);
+  document.addEventListener('keydown', closeOnEscape);
+  modalCloseBtn.addEventListener('click', closeModalContainer);
+}
 
-document.addEventListener('click', function (e) {
+function closeOnOutsideClick(e) {
   if (!modalContainer.contains(e.target)) closeModalContainer();
-});
+}
 
-document.addEventListener('keydown', function (e) {
+function closeOnEscape(e) {
   if (e.key === 'Escape') {
     closeModalContainer();
   }
-});
-
+}
 function closeModalContainer() {
   modalWindow.classList.add('is-hidden');
-
-  // removeListener();
+  removeListeners();
 }
 
-// function removeListener() {
-//   modalCloseBtn.removeEventListener('click', closeModalContainer);
-//   document.removeEventListener('click', closeOnOutsideClick);
-//   document.removeEventListener('keydown', closeOnEscape);
-// }
+function removeListeners() {
+  modalCloseBtn.removeEventListener('click', closeModalContainer);
+  document.removeEventListener('click', closeOnOutsideClick);
+  document.removeEventListener('keydown', closeOnEscape);
+}
 
 addToFavoritesBtn.addEventListener('click', handleAddToFavorites);
 
 export function openExerciseModal(exerciseDetails) {
   modalWindow.classList.remove('is-hidden');
-
+  addListeners();
   modalWindow.querySelector('.modal-title').innerHTML = exerciseDetails.name;
 
   modalWindow.querySelector(
