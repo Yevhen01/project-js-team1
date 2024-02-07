@@ -99,7 +99,7 @@ function handleAddToFavorites() {
 function addToFavorites(exerciseDetails) {
   const updatedFavorites = [...favorites, exerciseDetails];
   favorites = updatedFavorites;
-  console.log(favorites);
+  // console.log(favorites);
   localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
 }
 
@@ -108,7 +108,7 @@ export function removeFromFavorites(exerciseId) {
     exercise => exercise._id !== exerciseId
   );
   favorites = updatedFavorites;
-  console.log(favorites);
+  // console.log(favorites);
   localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
 }
 
