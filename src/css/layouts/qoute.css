@@ -50,7 +50,7 @@
 }
 
 .quotes-second {
-  background-image: url("../../img/qoute/quotes_first_mob.png");
+  background-image: url('../../img/qoute/quotes_first_mob.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,12 +59,11 @@
 
 @media (min-resolution: 192dpi) {
   .quotes-second {
-    background-image: url("../../img/qoute/quotes_first_mob@2x.png");
+    background-image: url('../../img/qoute/quotes_first_mob@2x.png');
   }
 }
 
 @media screen and (min-width: 768px) {
-
   .quotes-first,
   .quotes-second {
     border-radius: 50px;
@@ -104,13 +103,13 @@
   }
 
   .quotes-second {
-    background-image: url("../../img/qoute/quotes_first_tablet.png");
+    background-image: url('../../img/qoute/quotes_first_tablet.png');
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 768px) {
   .quotes-second {
-    background-image: url("../../img/qoute/quotes_first_tablet@2x.png");
+    background-image: url('../../img/qoute/quotes_first_tablet@2x.png');
   }
 }
 
@@ -133,12 +132,12 @@
   }
 
   .quotes-second {
-    background-image: url("../../img/qoute/quotes_first.png");
+    background-image: url('../../img/qoute/quotes_first.png');
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 1440px) {
   .quotes-second {
-    background-image: url("../../img/qoute/quotes_first@2x.png");
+    background-image: url('../../img/qoute/quotes_first@2x.png');
   }
 }
