@@ -79,7 +79,7 @@ const checkFavorites = () => {
           <p class="workout">workout</p>
             <a href="#" class="trash-link">
                 <svg class="icon-trash-svg" width="16" height="36">
-                  <use href="../img/icons.svg#icon-trash" class="trash-icon"></use>
+                  <use href="../../img/icons.svg#icon-trash" class="trash-icon"></use>
                 </svg>
               </a>
           </div>
@@ -87,14 +87,14 @@ const checkFavorites = () => {
             <a href="#" class="icon-arrow-container >
             <p class="exe-top-text">Start</p>
               <svg class="icon-arrow-svg" width="13" height="13">
-                <use href="./img/icons.svg#icon-right-sm-arrow"></use>
+                <use href="../../img/icons.svg#icon-right-sm-arrow"></use>
               </svg>
             </a>
         </div>
 
         <div class="item-middle-container">
           <svg class="icon-run-svg" width="32" height="32">
-            <use href="./img/icons.svg#icon-run"></use>
+            <use href="../../img/icons.svg#icon-run"></use>
           </svg>
           <h3 class="exe-card-title">${capitalizeFirstLetter(item.name)}</h3>
         </div>
