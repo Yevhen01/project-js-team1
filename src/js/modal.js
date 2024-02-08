@@ -76,7 +76,7 @@ export function openExerciseModal(exerciseDetails) {
     const ratingValue = Math.round(exerciseDetails.rating);
     const starSvg = stars[i].querySelector('.star-icon use');
     if (i < ratingValue) {
-      starSvg.setAttribute('href', '../img/icons.svg#icon-star-full');
+      starSvg.setAttribute('href', '../../img/icons.svg#icon-star-full');
     }
   }
 

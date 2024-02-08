@@ -242,21 +242,21 @@ function renderMarkupExrcises(data) {
             <p class="workout">workout</p>
             <p class="rating">${Math.round(item.rating) + '.0'}</p>
               <svg class="icon-star-svg" width="18" height="18">
-                <use href="./img/icons.svg#icon-star-full"></use>
+                <use href="../../img/icons.svg#icon-star-full"></use>
               </svg>
            </div>
 
             <a href="#" class="icon-arrow-container >
             <p class="exe-top-text">Start</p>
               <svg class="icon-arrow-svg" width="13" height="13">
-                <use href="./img/icons.svg#icon-right-sm-arrow"></use>
+                <use href="../../img/icons.svg#icon-right-sm-arrow"></use>
               </svg>
             </a>
         </div>
 
         <div class="item-middle-container">
           <svg class="icon-run-svg" width="32" height="32">
-            <use href="./img/icons.svg#icon-run"></use>
+            <use href="../../img/icons.svg#icon-run"></use>
           </svg>
           <h3 class="exe-card-title">${capitalizeFirstLetter(item.name)}</h3>
         </div>
