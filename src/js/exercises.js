@@ -1,7 +1,7 @@
 import { getFilter, getExercises, getExercisesById } from './fitnesapi';
 import { openExerciseModal } from './modal';
 import { capitalizeFirstLetter } from './helpers/string_utils';
-
+import icons from '../img/icons.svg';
 const refs = {
   musclesBtn: document.querySelector('.muscles-btn'),
   bodyPartsBtn: document.querySelector('.body-parts-btn'),
@@ -16,7 +16,6 @@ const refs = {
   loader: document.querySelector('.loader'),
   exercisesSection: document.querySelector('.exercises-section'),
 };
-
 refs.musclesBtn.addEventListener('click', () =>
   onFilterClick(refs.musclesBtn, 'Muscles')
 );
@@ -26,17 +25,14 @@ refs.bodyPartsBtn.addEventListener('click', () =>
 refs.equipmentBtn.addEventListener('click', () =>
   onFilterClick(refs.equipmentBtn, 'Equipment')
 );
-
 window.addEventListener('load', () =>
   onFilterClick(refs.musclesBtn, 'Muscles')
 );
-
 refs.removeBtn.addEventListener('click', e => {
   e.preventDefault();
   onRemoveInputValue(refs.searchInput);
 });
 refs.searchForm.addEventListener('submit', onExercisesSearch);
-
 refs.searchInput.addEventListener('input', () => {
   if (refs.searchInput.value.trim() !== '') {
     refs.removeBtn.style.display = 'block';
@@ -44,10 +40,8 @@ refs.searchInput.addEventListener('input', () => {
     refs.removeBtn.style.display = 'none';
   }
 });
-
 let currentPage = 1;
 let totalPages = 1;
-
 function renderMarkup(data) {
   refs.searchForm.style.display = 'none';
   const markup = data
@@ -62,11 +56,9 @@ function renderMarkup(data) {
     </li>`
     )
     .join('');
-
   refs.filterList.innerHTML = markup;
   data.forEach(item => attachClickEventToItem(item));
 }
-
 function renderPaginationButton(i, filter) {
   const button = document.createElement('button');
   button.classList.add('pagination-btn');
@@ -74,22 +66,17 @@ function renderPaginationButton(i, filter) {
   button.addEventListener('click', event => onPageClick(i, filter, event));
   return button;
 }
-
 function renderPagination(filter) {
   const paginationFilter = refs.paginationFilter;
-
   if (totalPages > 1) {
     paginationFilter.innerHTML = '';
-
     for (let i = 1; i <= totalPages; i++) {
       const button = renderPaginationButton(i, filter);
       paginationFilter.appendChild(button);
     }
-
     const activeButton = paginationFilter.querySelector(
       `.pagination-btn:nth-child(${currentPage})`
     );
-
     if (activeButton) {
       activeButton.classList.add('active');
     }
@@ -97,15 +84,12 @@ function renderPagination(filter) {
     paginationFilter.innerHTML = '';
   }
 }
-
 async function onPageClick(page, filter, event) {
   const clickedButton = event.currentTarget;
   const currentActiveButton = document.querySelector('.pagination-btn.active');
-
   if (currentActiveButton) {
     currentActiveButton.classList.remove('active');
   }
-
   clickedButton.classList.add('active');
   currentPage = page;
   refs.exercisesList.innerHTML = '';
@@ -121,7 +105,6 @@ async function onPageClick(page, filter, event) {
     refs.loader.style.display = 'none';
   }
 }
-
 async function onFilterClick(clickedBtn, filter) {
   currentPage = 1;
   refs.exercisesTitle.innerHTML = '';
@@ -132,7 +115,6 @@ async function onFilterClick(clickedBtn, filter) {
     .querySelectorAll('.exercises-btn')
     .forEach(btn => btn.classList.remove('active'));
   clickedBtn.classList.add('active');
-
   try {
     const { data, fetchedPage, fetchedTotalPages } = await getFilter(filter);
     currentPage = fetchedPage;
@@ -145,14 +127,11 @@ async function onFilterClick(clickedBtn, filter) {
     refs.loader.style.display = 'none';
   }
 }
-
 async function onItemClickGetExercises(filterListItem) {
   let filter = filterListItem.dataset.filter.toLowerCase();
-
   if (filter === 'body parts') {
     filter = 'bodypart';
   }
-
   const value = filterListItem.dataset.name;
   refs.exercisesTitle.innerHTML = ` /<span class="exercises-title-grey"> ${value}</span>`;
   let page = 1;
@@ -162,7 +141,6 @@ async function onItemClickGetExercises(filterListItem) {
   try {
     const data = await getExercises(page, filter, value);
     renderMarkupExrcises(data.results);
-
     renderExercisesPagination(data.totalPages, filter, value);
   } catch (error) {
     console.log(error);
@@ -170,10 +148,8 @@ async function onItemClickGetExercises(filterListItem) {
     refs.loader.style.display = 'none';
   }
 }
-
 function renderExercisesPagination(totalPages, filter, value, keyword) {
   const paginationExercises = refs.paginationFilter;
-
   if (totalPages > 1 && totalPages <= 3) {
     paginationExercises.innerHTML = '';
     for (let i = 1; i <= totalPages; i++) {
@@ -197,7 +173,6 @@ function renderExercisesPagination(totalPages, filter, value, keyword) {
     paginationExercises.innerHTML = '';
   }
 }
-
 function renderPaginationButtonExercises(i, filter, value, keyword) {
   const button = document.createElement('button');
   button.classList.add('pagination-btn');
@@ -207,16 +182,12 @@ function renderPaginationButtonExercises(i, filter, value, keyword) {
   );
   return button;
 }
-
 async function onPageClickExercises(page, filter, event, value, keyword) {
   const clickedButton = event.currentTarget;
-
   const currentActiveButton = document.querySelector('.pagination-btn.active');
-
   if (currentActiveButton) {
     currentActiveButton.classList.remove('active');
   }
-
   clickedButton.classList.add('active');
   refs.exercisesList.innerHTML = '';
   refs.loader.style.display = 'block';
@@ -230,7 +201,6 @@ async function onPageClickExercises(page, filter, event, value, keyword) {
     refs.loader.style.display = 'none';
   }
 }
-
 function renderMarkupExrcises(data) {
   refs.searchForm.style.display = 'block';
   const markup = data
@@ -242,25 +212,22 @@ function renderMarkupExrcises(data) {
             <p class="workout">workout</p>
             <p class="rating">${Math.round(item.rating) + '.0'}</p>
               <svg class="icon-star-svg" width="18" height="18">
-                <use href="../../img/icons.svg#icon-star-full"></use>
+                <use href="${icons}#icon-star-full"></use>
               </svg>
            </div>
-
             <a href="#" class="icon-arrow-container >
             <p class="exe-top-text">Start</p>
               <svg class="icon-arrow-svg" width="13" height="13">
-                <use href="../../img/icons.svg#icon-right-sm-arrow"></use>
+                <use href="${icons}#icon-right-sm-arrow"></use>
               </svg>
             </a>
         </div>
-
         <div class="item-middle-container">
           <svg class="icon-run-svg" width="32" height="32">
-            <use href="../../img/icons.svg#icon-run"></use>
+            <use href="${icons}#icon-run"></use>
           </svg>
           <h3 class="exe-card-title">${capitalizeFirstLetter(item.name)}</h3>
         </div>
-
         <div class="item-bottom-container">
             <p class="bottom-info-text">
               <span class="bottom-span-text">Burned calories:</span> ${
@@ -277,20 +244,16 @@ function renderMarkupExrcises(data) {
                 item.target
               )}
             </p>
-
         </div>
     </li>`
     )
     .join('');
-
   refs.exercisesList.innerHTML = markup;
   refs.exercisesList.addEventListener('click', onExercisesClick);
 }
-
 // function capitalizeFirstLetter(text) {
 //   return text.charAt(0).toUpperCase() + text.slice(1);
 // }
-
 function attachClickEventToItem(item) {
   const filterListItem = document.querySelector(
     `[data-filter="${item.filter}"][data-name="${item.name}"]`
@@ -299,12 +262,9 @@ function attachClickEventToItem(item) {
     onItemClickGetExercises(filterListItem)
   );
 }
-
 function onExercisesSearch(event) {
   event.preventDefault();
-
   refs.removeBtn.style.display = 'none';
-
   const keyword = refs.searchInput.value.trim().toLowerCase();
   if (keyword !== '') {
     let filter = document
@@ -319,12 +279,10 @@ function onExercisesSearch(event) {
     filterExercisesBySearch(filter, value, keyword);
   }
 }
-
 function onRemoveInputValue(inputField) {
   inputField.value = '';
   refs.removeBtn.style.display = 'none';
 }
-
 async function filterExercisesBySearch(filter, value, keyword) {
   if (keyword === '') {
     return;
@@ -348,21 +306,17 @@ async function filterExercisesBySearch(filter, value, keyword) {
     refs.loader.style.display = 'none';
   }
 }
-
 function onExercisesClick(event) {
   event.preventDefault();
   const isArrowIcon = event.target.closest('.icon-arrow-container');
-
   if (isArrowIcon) {
     const exerciseItem = event.target.closest('[data-id]');
-
     if (exerciseItem) {
       const exerciseId = exerciseItem.dataset.id;
       onArrowClick(exerciseId);
     }
   }
 }
-
 async function onArrowClick(exerciseId) {
   try {
     const exerciseDetails = await getExercisesById(exerciseId);
