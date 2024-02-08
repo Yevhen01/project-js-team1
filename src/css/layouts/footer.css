@@ -25,13 +25,7 @@
       url('../../img/footer/footer-mob.jpg') 1x,
       url('../../img/footer/footer-mob@2x.jpg') 2x,
       url('../../img/footer/footer-mob.webp') 1x,
-      url('./../img/footer/footer-mob@2x.webp') 2x
-    );
-    /* background-image: linear-gradient(
-        rgba(46, 47, 66, 0.1),
-        rgba(46, 47, 66, 0.1)
-      ),
-      url('../../img/footer/footer-mob.jpg'); */
+      url('../../img/footer/footer-mob@2x.webp') 2x
     );
   }
 

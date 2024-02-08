@@ -1,12 +1,11 @@
 import { capitalizeFirstLetter } from './helpers/string_utils';
 import { getExercisesById } from './fitnesapi';
 import { openExerciseModal, removeFromFavorites } from './modal';
-
+import icons from '../img/icons.svg';
 const favoritesList = document.querySelector('[data-name="favorites-list"]');
 const favoritesEmpty = document.querySelector('[data-name="favorites-empty"]');
 const modalWindow = document.querySelector('.modal');
 const addToFavoritesBtn = modalWindow.querySelector('.js-btn-add');
-
 const onClickDeleteItem = exerciseId => {
   try {
     removeFromFavorites(exerciseId);
@@ -15,7 +14,6 @@ const onClickDeleteItem = exerciseId => {
     console.error(error);
   }
 };
-
 document.addEventListener('click', function (event) {
   const target = event.target;
   if (target && target.classList.contains('trash-icon')) {
@@ -23,34 +21,28 @@ document.addEventListener('click', function (event) {
     onClickDeleteItem(exerciseId);
   }
 });
-
 addToFavoritesBtn.addEventListener('click', () => {
   checkFavorites();
 });
-
 const handleTrashLinkClick = link => {
   const exerciseId = link.closest('.exe-info-list-item').dataset.id;
   selectedExerciseId = exerciseId;
   onClickDeleteItem(exerciseId);
 };
-
 favoritesList.querySelectorAll('.trash-link').forEach(link => {
   link.addEventListener('click', () => handleTrashLinkClick(link));
 });
-
 const onExercisesClick = event => {
   event.preventDefault();
   const isArrowIcon = event.target.closest('.icon-arrow-container');
   if (isArrowIcon) {
     const exerciseItem = event.target.closest('[data-id]');
-
     if (exerciseItem) {
       const exerciseId = exerciseItem.dataset.id;
       onArrowClick(exerciseId);
     }
   }
 };
-
 const onArrowClick = async exerciseId => {
   try {
     const exerciseDetails = await getExercisesById(exerciseId);
@@ -59,7 +51,6 @@ const onArrowClick = async exerciseId => {
     console.log(error);
   }
 };
-
 const checkFavorites = () => {
   try {
     const favoritesExercises = JSON.parse(
@@ -79,26 +70,23 @@ const checkFavorites = () => {
           <p class="workout">workout</p>
             <a href="#" class="trash-link">
                 <svg class="icon-trash-svg" width="16" height="36">
-                  <use href="../../img/icons.svg#icon-trash" class="trash-icon"></use>
+                  <use href="${icons}#icon-trash" class="trash-icon"></use>
                 </svg>
               </a>
           </div>
-
             <a href="#" class="icon-arrow-container >
             <p class="exe-top-text">Start</p>
               <svg class="icon-arrow-svg" width="13" height="13">
-                <use href="../../img/icons.svg#icon-right-sm-arrow"></use>
+                <use href="${icons}#icon-right-sm-arrow"></use>
               </svg>
             </a>
         </div>
-
         <div class="item-middle-container">
           <svg class="icon-run-svg" width="32" height="32">
-            <use href="../../img/icons.svg#icon-run"></use>
+            <use href="${icons}#icon-run"></use>
           </svg>
           <h3 class="exe-card-title">${capitalizeFirstLetter(item.name)}</h3>
         </div>
-
         <div class="item-bottom-container">
           <div class="bottom-one-info-container">
             <p class="bottom-info-text">
@@ -123,11 +111,9 @@ const checkFavorites = () => {
     </li>`
         )
         .join('');
-
       favoritesEmpty.classList.add('favorites-visually-hidden');
       favoritesList.innerHTML = markup;
       favoritesList.classList.remove('favorites-visually-hidden');
-
       favoritesList.addEventListener('click', onExercisesClick);
     }
   } catch (error) {
@@ -136,5 +122,4 @@ const checkFavorites = () => {
     favoritesList.classList.add('favorites-visually-hidden');
   }
 };
-
 checkFavorites();
