@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/project-js-team1/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    
+    <title>EnergyFlow</title>
+    <script type="module" crossorigin src="/project-js-team1/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-js-team1/assets/vendor-0a7943b3.js">
+    <link rel="modulepreload" crossorigin href="/project-js-team1/assets/fitnesapi-37575d4f.js">
+    <link rel="stylesheet" href="/project-js-team1/assets/fitnesapi-9ca0ee2e.css">
+    <link rel="stylesheet" href="/project-js-team1/assets/vendor-e5212ee8.css">
+  </head>
+  <body>
+    <header class="page-header" id="page-header">
+  <div class="container">
+    <div class="page-header-container">
+      <a href="./index.html" class="link logo">energy.flow</a>
+      <nav class="page-nav">
+        <ul class="list page-nav-list">
+          <li class="page-nav-item">
+            <a class="link page-nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="page-nav-item">
+            <a class="link page-nav-link" href="./favorites.html">Favorites</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="list socials-list header-socials-list">
+        <li class="header-socials-item">
+          <a
+            class="link header-socials-link"
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+          >
+            <svg class="socials-svg" width="28" height="28">
+              <use href="/project-js-team1/assets/icons-a39a6962.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="header-socials-item">
+          <a
+            class="link header-socials-link"
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+          >
+            <svg class="socials-svg" width="28" height="28">
+              <use href="../img/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="header-socials-item">
+          <a
+            class="link header-socials-link"
+            href="https://www.youtube.com/c/GoIT"
+            target="_blank"
+          >
+            <svg class="socials-svg" width="28" height="28">
+              <use href="../img/icons.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="toggle-mobile-menu-btn"
+        id="toggle-mobile-menu-btn"
+      >
+        <svg class="open-mobile-menu-svg">
+          <use
+            class="toggle-mobile-menu-svg icon-burger"
+            id="icon-burger"
+            href="../img/icons.svg#icon-burger"
+          ></use>
+          <use
+            class="toggle-mobile-menu-svg icon-close-svg is-hidden"
+            id="icon-close"
+            href="../img/icons.svg#icon-close"
+          ></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <section class="hero-section container">
+  <div class="hero-section-second-container">
+    <ul class="hero-section-list">
+      <li class="hero-section-sport-list-item hero-section-list-item">
+        #Sport
+      </li>
+      <li class="hero-section-healthy-list-item hero-section-list-item">
+        #Healthy
+      </li>
+      <li class="hero-section-workout-list-item hero-section-list-item">
+        #Workout
+      </li>
+      <li class="hero-section-diet-list-item hero-section-list-item">#Diet</li>
+    </ul>
+  </div>
+  <div class="hero-section-container">
+    <h1 class="hero-section-title">
+      Get <span class="hero-section-title-word">Body</span> in shape, Stay
+      healthy
+    </h1>
+    <p class="hero-section-title-text">
+      Transform your physique and embrace a healthier lifestyle with our
+      comprehensive fitness and nutrition support.
+    </p>
+  </div>
+</section>
+
+      <section class="quotes-section-cont container">
+  <div class="quotes-first">
+    <div class="quotes-first-header">
+      <svg
+        class="quotes-first-header-icon"
+        width="32"
+        height="32"
+        aria-label="Run man icon"
+      >
+        <use href="../img/icons.svg#icon-run-man"></use>
+      </svg>
+      <h3 class="quotes-first-header-title">Quote of the day</h3>
+      <svg
+        class="quotes-quote-icon"
+        width="28"
+        height="28"
+        aria-label="Quotes icon"
+      >
+        <use href="../img/icons.svg#icon-qoute"></use>
+      </svg>
+    </div>
+    <div class="quotes-quote-cont">
+      <p data-name="quote" class="quotes-quote"></p>
+      <p data-name="author" class="quotes-author"></p>
+    </div>
+  </div>
+  <div class="quotes-second"></div>
+</section>
+
+      <section class="exercises-section">
+    <div class="container">
+        <div class="wrapper">
+            <h2 class="exercises-title">Exercises<span class="exercises-title-filter"></span></h2>
+
+            <div class="button-wrapper">
+                <button type="button" class="muscles-btn exercises-btn active">Muscles</button>
+                <button type="button" class="body-parts-btn exercises-btn">Body parts</button>
+                <button type="button" class="equipment-btn exercises-btn">Equipment</button>
+                <form class="search-form"><input type="search" name="search-exercises" class="search-exercise-input"
+                        placeholder="Search" /><button type="click" class="remove-btn"><svg class="remove-svg"
+                            width="10" height="10">
+                            <use href="/project-js-team1/assets/icons-a39a6962.svg#icon-close"></use>
+                        </svg></button><button type="submit" class="search-btn"><svg class="search-svg" width="18"
+                            height="18">
+                            <use href="/project-js-team1/assets/icons-a39a6962.svg#icon-search"></use>
+                        </svg></button></form>
+            </div>
+            <span class="loader"></span>
+            <ul class="filter-list"></ul>
+            <ul class="exercises-list exe-info-list"></ul>
+            <ul class="pagination-filter"></ul>
+        </div>
+    </div>
+</section>
+
+      <section class="daily-section">
+  <div class="container daily-wrapper">
+    <ul class="daily-list">
+      <li class="daily-item daily-img-item">
+        <picture class="daily-img">
+          <source
+            srcset="/project-js-team1/assets/daily-desc-8530b82d.webp 1x, /project-js-team1/assets/daily-desc@2x-a0913085.webp 2x"
+            media="(min-width: 1440px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/project-js-team1/assets/daily-desc-42d53c4b.jpg 1x, /project-js-team1/assets/daily-desc@2x-b831de46.jpg 2x"
+            media="(min-width: 1440px)"
+          />
+
+          <source
+            srcset="/project-js-team1/assets/daily-tab-b4868ec3.webp 1x, /project-js-team1/assets/daily-tab@2x-4391171f.webp 2x"
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/project-js-team1/assets/daily-tab-bfe1c64e.jpg 1x, /project-js-team1/assets/daily-tab@2x-c0f28a4a.jpg 2x"
+            media="(min-width: 768px)"
+          />
+
+          <source
+            srcset="data:image/webp;base64,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 1x, /project-js-team1/assets/daily-mob@2x-bc62e112.webp 2x"
+            media="(max-width: 767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/project-js-team1/assets/daily-mob-5be144b1.jpg 1x, /project-js-team1/assets/daily-mob@2x-599cad9b.jpg 2x"
+            media="(max-width: 767px)"
+          />
+
+          <img class="daily" src="/project-js-team1/assets/daily-desc-42d53c4b.jpg" alt="daily" />
+        </picture>
+      </li>
+
+      <li class="daily-item daily-info-item-wrapper">
+        <div class="daily-info-item-container">
+          <div class="dayily-icon">
+            <svg class="daily-icon" width="32" height="32">
+              <use href="/project-js-team1/assets/icons-a39a6962.svg#icon-fitness"></use>
+            </svg>
+          </div>
+
+          <div class="daily-text-container">
+            <h2 class="dail-info-item-title">110 min</h2>
+            <p class="dail-info-item-subtitle">Daily norm of sports</p>
+            <p class="dail-info-item-text">
+              The World Health Organization recommends at least 150 minutes of
+              moderate-intensity aerobic physical activity throughout the week
+              for adults aged 18-64. However, what happens if we adjust that
+              number to 110 minutes every day?
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    </main>
+    <footer class="container">
+  <div class="footer-backgrounde">
+    <div class="info-content">
+      <nav class="navigation">
+        <a href="../index.html" class="brand-lebel">energy.flow</a>
+        <ul class="social-links">
+          <li class="social-link">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/goITclub/"
+              class="social-icon"
+            >
+              <svg class="icon" width="20" height="20">
+                <use href="../img/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/goitclub/"
+              class="social-icon"
+            >
+              <svg class="icon" width="20" height="20">
+                <use href="../img/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-link">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/c/GoIT"
+              class="social-icon"
+            >
+              <svg class="icon" width="20" height="20">
+                <use href="../img/icons.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="content-conteiner">
+        <div class="info-section">
+          <h1 class="info-title">
+            Transforming your <span class="info-subtitle">body</span> shape with
+            us
+          </h1>
+        </div>
+        <div class="content-form">
+          <p class="text">Subscribe and learn about new exercises!</p>
+          <form action="#" class="form-mail" id="subscriptionForm">
+            <label for="email">
+              <input
+                type="text"
+                placeholder="Email"
+                id="email"
+                required
+                autocomplete="on"
+              />
+              <button class="form-submit" type="submit">Send</button>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-info">
+      <p>Energy Flow. All rights reserved.</p>
+      <span class="policy-links">
+        <a href>Privacy Policy</a>
+        <p>/</p>
+        <a href>Terms of Service</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+    <div class="modal is-hidden">
+  <div class="modal-box">
+    <button class="modal-close" type="button">
+      <svg class="close-icon" id="closeExerciseModal" width="14" height="14">
+        <use href="../img/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="modal-content">
+      <div class="modal-gif">
+      </div>
+      <div class="modal-info">
+        <h1 class="modal-title">#</h1>
+        <div class="modal-rating">
+          <span class="average-rating">#</span>
+          <ul class="rating-stars">
+            <li class="rating-item">
+              <svg class="star-icon" width="18" height="18">
+                <use href="../img/icons.svg#icon-star"></use>
+              </svg>
+            </li>
+            <li class="rating-item">
+              <svg class="star-icon" width="18" height="18">
+                <use href="../img/icons.svg#icon-star"></use>
+              </svg>
+            </li>
+            <li class="rating-item">
+              <svg class="star-icon" width="18" height="18">
+                <use href="../img/icons.svg#icon-star"></use>
+              </svg>
+            </li>
+            <li class="rating-item">
+              <svg class="star-icon" width="18" height="18">
+                <use href="../img/icons.svg#icon-star"></use>
+              </svg>
+            </li>
+            <li class="rating-item">
+              <svg class="star-icon" width="18" height="18">
+                <use class="star-svg" href="../img/icons.svg#icon-star"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <svg class="modal-line" width="342" height="2">
+          <use href="../img/icons.svg#icon-line"></use>
+        </svg>
+        <div class="modal-short-info">
+          <ul class="exercises-short-list">
+            <li class="exercises-short-item">
+              <h2 class="title-short-list">Target</h2>
+              <p class="short-list-info modal-target">#</p>
+            </li>
+            <li class="exercises-short-item">
+              <h2 class="title-short-list ">
+                Body part
+              </h2>
+              <p class="short-list-info modal-dody-part">#</p>
+            </li>
+            <li class="exercises-short-item">
+              <h2 class="title-short-list ">Equipment</h2>
+              <p class="short-list-info modal-equipment">#</p>
+            </li>
+            <li class="exercises-short-item">
+              <h2 class="title-short-list">Popular</h2>
+              <p class="short-list-info modal-popular">#</p>
+            </li>
+            <li class="exercises-short-item">
+              <h2 class="title-short-list">Burned calories</h2>
+              <p class="short-list-info"><span class="modal-calories">#</span><span class="min">/3 min</span></p>
+            </li>
+          </ul>
+        </div>
+        <svg class="modal-line" width="342" height="2">
+          <use href="../img/icons.svg#icon-line"></use>
+        </svg>
+        <p class="modal-description">#</p>
+        <div class="modal-buttons">
+          <button class="modal-btn js-btn-add"><span class="btn-text">Add to Favorites</span>
+            <svg class="btn-heart" width="20" height="20">
+              <use href="../img/icons.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <!-- <button class="modal-btn give-btn" id="giveRatingBtn">Give a rating</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="container">
+  <div class="super-container"></div>
+  <div class="mobile-menu-container is-hidden" id="mobile-menu-container">
+    <a href="./index.html" class="link logo-mobile">energy.flow</a>
+    <nav class="mobile-nav">
+      <ul class="list page-nav-list">
+        <li class="mobile-nav-item">
+          <a class="link page-nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="link page-nav-link" href="./favorites.html">Favorites</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="list socials-list mobile-socials-list">
+      <li class="header-socials-item mob-soc-item">
+        <a
+          class="link mobile-socials-link"
+          href="https://www.facebook.com/goITclub/"
+          target="_blank"
+        >
+          <svg class="socials-svg" width="28" height="28">
+            <use href="/project-js-team1/assets/icons-a39a6962.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="header-socials-item mob-soc-item">
+        <a
+          class="link mobile-socials-link"
+          href="https://www.instagram.com/goitclub/"
+          target="_blank"
+        >
+          <svg class="socials-svg" width="28" height="28">
+            <use href="../img/icons.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="header-socials-item mob-soc-item">
+        <a
+          class="link mobile-socials-link"
+          href="https://www.youtube.com/c/GoIT"
+          target="_blank"
+        >
+          <svg class="socials-svg" width="28" height="28">
+            <use href="../img/icons.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    
+  </body>
+</html>
