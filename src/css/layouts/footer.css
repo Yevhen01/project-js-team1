@@ -182,7 +182,7 @@
         rgba(46, 47, 66, 0.1),
         rgba(46, 47, 66, 0.1)
       ),
-      url('../img/footer/footer-mob@2x.jpg');
+      url('../../img/footer/footer-mob@2x.jpg');
   }
 }
 
@@ -200,7 +200,7 @@
       url('../img/footer/footer-tab@2x.webp') 2x
     ); */
 
-    background-image: url('../img/footer/footer-tab.jpg');
+    background-image: url('../../img/footer/footer-tab.jpg');
   }
 
   .brand-lebel {
@@ -342,7 +342,7 @@
         rgba(46, 47, 66, 0.1),
         rgba(46, 47, 66, 0.1)
       ),
-      url('../img/footer/footer-tab@2x.jpg');
+      url('../../img/footer/footer-tab@2x.jpg');
   }
 }
 
@@ -360,7 +360,7 @@
       url('../img/footer/footer-desc@2x.webp') 2x
     ); */
 
-    background-image: url('../img/footer/footer-desc.jpg');
+    background-image: url('../../img/footer/footer-desc.jpg');
   }
 
   .info-title {
@@ -400,7 +400,7 @@
         rgba(46, 47, 66, 0.1),
         rgba(46, 47, 66, 0.1)
       ),
-      url('../img/footer/footer-desc@2x.jpg');
+      url('../../img/footer/footer-desc@2x.jpg');
   }
 }
 
