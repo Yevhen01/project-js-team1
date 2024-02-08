@@ -27,12 +27,12 @@
       url('../../img/footer/footer-mob.webp') 1x,
       url('./../img/footer/footer-mob@2x.webp') 2x
     );
-
     /* background-image: linear-gradient(
         rgba(46, 47, 66, 0.1),
         rgba(46, 47, 66, 0.1)
       ),
       url('../../img/footer/footer-mob.jpg'); */
+    );
   }
 
   .brand-lebel {
@@ -174,18 +174,6 @@
   }
 }
 
-/* @media screen and (min-resolution: 192dpi),
-  screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 2dppx) {
-  .footer-backgrounde {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.1),
-        rgba(46, 47, 66, 0.1)
-      ),
-      url('../../img/footer/footer-mob@2x.jpg');
-  }
-} */
-
 @media screen and (min-width: 768px) {
   .footer-backgrounde {
     position: relative;
@@ -199,8 +187,6 @@
       url('../../img/footer/footer-tab.webp') 1x,
       url('../../img/footer/footer-tab@2x.webp') 2x
     );
-
-    /* background-image: url('../../img/footer/footer-tab.jpg'); */
   }
 
   .brand-lebel {
@@ -334,18 +320,6 @@
   }
 }
 
-/* @media screen and (min-resolution: 192dpi),
-  screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 2dppx) {
-  .footer-backgrounde {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.1),
-        rgba(46, 47, 66, 0.1)
-      ),
-      url('../../img/footer/footer-tab@2x.jpg');
-  }
-} */
-
 @media screen and (min-width: 1440px) {
   .footer-backgrounde {
     position: relative;
@@ -359,8 +333,6 @@
       url('../../img/footer/footer-desc.webp') 1x,
       url('../../img/footer/footer-desc@2x.webp') 2x
     );
-
-    /* background-image: url('../../img/footer/footer-desc.jpg'); */
   }
 
   .info-title {
@@ -391,18 +363,6 @@
     padding-bottom: 26px;
   }
 }
-
-/* @media screen and (min-resolution: 192dpi),
-  screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 2dppx) {
-  .footer-backgrounde {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.1),
-        rgba(46, 47, 66, 0.1)
-      ),
-      url('../../img/footer/footer-desc@2x.jpg');
-  }
-} */
 
 .iziToast {
   border-radius: 20px;
