@@ -71,6 +71,7 @@
 }
 .header-socials-link {
   fill: var(--third-bg-color);
+  transition: transform 0.4s;
 }
 .header-socials-link:hover,
 .header-socials-link:focus {
@@ -132,9 +133,6 @@
 =====  mobile-menu.css ==============
 ======================================= */
 @media screen and (max-width: 767px) {
-  .super-container {
-    padding-left: 36px;
-  }
   .mobile-menu-container {
     position: fixed;
     display: flex;
@@ -151,8 +149,8 @@
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .open-mobile-menu-svg {
-    width: 32px;
-    height: 16px;
+    width: 24px;
+    height: 20px;
   }
 
   .logo-mobile {
@@ -179,6 +177,7 @@
     border: 1px solid var(--light-color);
   }
   .mobile-socials-link {
+    transition: transform 0.4s;
     fill: var(--light-color);
   }
   .mobile-socials-link:hover,
@@ -189,6 +188,10 @@
   .icon-close-svg {
     stroke: var(--light-color);
   }
+  .icon-close-svg:hover,
+  .icon-close-svg:focus {
+    stroke: var(--dark-color);
+  }
   .toggle-mobile-menu-svg.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -198,6 +201,10 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+  }
+  .icon-burger {
+    width: 32px;
+    height: 16px;
   }
 }
 
